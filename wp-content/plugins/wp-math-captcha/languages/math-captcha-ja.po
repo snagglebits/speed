@@ -1,0 +1,263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha\n"
+"POT-Creation-Date: 2013-08-28 11:18+0100\n"
+"PO-Revision-Date: 2013-09-19 00:05+0900\n"
+"Last-Translator: \n"
+"Language-Team: stranger-jp\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+msgid "one"
+msgstr "1"
+
+msgid "two"
+msgstr "2"
+
+msgid "three"
+msgstr "3"
+
+msgid "four"
+msgstr "4"
+
+msgid "five"
+msgstr "5"
+
+msgid "six"
+msgstr "6"
+
+msgid "seven"
+msgstr "7"
+
+msgid "eight"
+msgstr "8"
+
+msgid "nine"
+msgstr "9"
+
+msgid "ten"
+msgstr "10"
+
+msgid "eleven"
+msgstr "11"
+
+msgid "twelve"
+msgstr "12"
+
+msgid "thirteen"
+msgstr "13"
+
+msgid "fourteen"
+msgstr "14"
+
+msgid "fifteen"
+msgstr "15"
+
+msgid "sixteen"
+msgstr "16"
+
+msgid "seventeen"
+msgstr "17"
+
+msgid "eighteen"
+msgstr "18"
+
+msgid "nineteen"
+msgstr "19"
+
+msgid "twenty"
+msgstr "20"
+
+msgid "thirty"
+msgstr "30"
+
+msgid "forty"
+msgstr "40"
+
+msgid "fifty"
+msgstr "50"
+
+msgid "sixty"
+msgstr "60"
+
+msgid "seventy"
+msgstr "70"
+
+msgid "eighty"
+msgstr "80"
+
+msgid "ninety"
+msgstr "90"
+
+msgid "ERROR"
+msgstr "エラー"
+
+msgid "Please enter captcha value."
+msgstr "キャプチャの値を入力してください。"
+
+msgid "Invalid captcha value."
+msgstr "キャプチャ値が無効です。"
+
+msgid "Captcha time expired."
+msgstr "キャプチャの期限切れです。"
+
+msgid "login form"
+msgstr "ログインフォーム"
+
+msgid "registration form"
+msgstr "登録フォーム"
+
+msgid "reset password form"
+msgstr "パスワードのリセットフォーム"
+
+msgid "comment form"
+msgstr "コメントフォーム"
+
+msgid "bbpress"
+msgstr "bbPress"
+
+msgid "contact form 7"
+msgstr "contact form 7"
+
+msgid "yes"
+msgstr "はい"
+
+msgid "no"
+msgstr "いいえ"
+
+msgid "addition (+)"
+msgstr "加算 (+)"
+
+msgid "subtraction (-)"
+msgstr "減算 (-)"
+
+msgid "multiplication (&#215;)"
+msgstr "乗算 (&#215;)"
+
+msgid "division (&#247;)"
+msgstr "除算 (&#247;)"
+
+msgid "numbers"
+msgstr "整数"
+
+msgid "words"
+msgstr "数値"
+
+msgid "Math Captcha settings"
+msgstr "数学キャプチャ設定"
+
+msgid "Enable Math Captcha for"
+msgstr "有効にする項目"
+
+msgid "Hide for logged in users"
+msgstr "ログインユーザーに非表示"
+
+msgid "Mathematical operations"
+msgstr "キャプチャの計算方法"
+
+msgid "Display captcha as"
+msgstr "キャプチャの表示方法"
+
+msgid "Captcha field title"
+msgstr "キャプチャフィールドのタイトル"
+
+msgid "Captcha time"
+msgstr "キャプチャ時間"
+
+msgid "Deactivation"
+msgstr "プラグインの設定を削除"
+
+msgid "Select were would you like to use Math Captcha."
+msgstr "キャプチャを使用する項目を選択してください。"
+
+msgid "Would you like to hide captcha for logged in users?"
+msgstr "ログインユーザーはキャプチャを非表示にしますか？"
+
+msgid "How to entitle field with captcha?"
+msgstr "キャプチャを適用するフィールドに表示するタイトルを指定します。"
+
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr "ユーザーがキャプチャの値を入力しなければならない時間(秒)を指定します。"
+
+msgid "Delete settings on plugin deactivation"
+msgstr "プラグインの停止時にすべてのデータを削除する場合は有効にします。"
+
+msgid "Select which mathematical operations to use in your captcha."
+msgstr "キャプチャで使用する計算方法を選択します。"
+
+msgid "Select how you'd like to display you captcha."
+msgstr "キャプチャの表示方法を選択します。"
+
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr ""
+"キャプチャの計算方法は少なくとも一つ選択する必要があります。このオプションの"
+"デフォルト設定を復元します。"
+
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr ""
+"キャプチャの表示方法は少なくとも1つ選択する必要があります。このオプションのデ"
+"フォルト設定を復元します。"
+
+msgid "Math Captcha"
+msgstr "数学キャプチャ"
+
+msgid "Need support?"
+msgstr "Need support?"
+
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr ""
+"If you are having problems with this plugin, please talk about them in the"
+
+msgid "Support forum"
+msgstr "Support forum"
+
+msgid "Do you like this plugin?"
+msgstr "Do you like this plugin?"
+
+msgid "Rate it 5"
+msgstr "Rate it 5"
+
+msgid "on WordPress.org"
+msgstr "on WordPress.org"
+
+msgid "Blog about it & link to the"
+msgstr "Blog about it & link to the"
+
+msgid "plugin page"
+msgstr "プラグインのページ"
+
+msgid "Check out our other"
+msgstr "Check out our other"
+
+msgid "WordPress plugins"
+msgstr "WordPress plugins"
+
+msgid "Support"
+msgstr "サポート"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Input field settings"
+msgstr "入力フィールドの設定"
+
+msgid "optional"
+msgstr "オプショナル"
+
+msgid "Copy this code and paste it into the form left."
+msgstr "このコードをコピーして左のフォームに貼り付けます。"

@@ -1,0 +1,678 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha\n"
+"POT-Creation-Date: 2013-08-28 11:17+0100\n"
+"PO-Revision-Date: 2013-08-28 11:18+0100\n"
+"Last-Translator: Bartosz Arendt <info@digitalfactory.pl>\n"
+"Language-Team: dFactory <info@dfactory.eu>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wp-math-captcha.php:496
+msgid "one"
+msgstr "jeden"
+
+#: ../wp-math-captcha.php:497
+msgid "two"
+msgstr "dwa"
+
+#: ../wp-math-captcha.php:498
+msgid "three"
+msgstr "trzy"
+
+#: ../wp-math-captcha.php:499
+msgid "four"
+msgstr "cztery"
+
+#: ../wp-math-captcha.php:500
+msgid "five"
+msgstr "pięć"
+
+#: ../wp-math-captcha.php:501
+msgid "six"
+msgstr "sześć"
+
+#: ../wp-math-captcha.php:502
+msgid "seven"
+msgstr "siedem"
+
+#: ../wp-math-captcha.php:503
+msgid "eight"
+msgstr "osiem"
+
+#: ../wp-math-captcha.php:504
+msgid "nine"
+msgstr "dziewięć"
+
+#: ../wp-math-captcha.php:505
+msgid "ten"
+msgstr "dziesięć"
+
+#: ../wp-math-captcha.php:506
+msgid "eleven"
+msgstr "jedenaście"
+
+#: ../wp-math-captcha.php:507
+msgid "twelve"
+msgstr "dwanaście"
+
+#: ../wp-math-captcha.php:508
+msgid "thirteen"
+msgstr "trzynaście"
+
+#: ../wp-math-captcha.php:509
+msgid "fourteen"
+msgstr "czternaście"
+
+#: ../wp-math-captcha.php:510
+msgid "fifteen"
+msgstr "piętnaście"
+
+#: ../wp-math-captcha.php:511
+msgid "sixteen"
+msgstr "szesnaście"
+
+#: ../wp-math-captcha.php:512
+msgid "seventeen"
+msgstr "siedemnaście"
+
+#: ../wp-math-captcha.php:513
+msgid "eighteen"
+msgstr "osiemnaście"
+
+#: ../wp-math-captcha.php:514
+msgid "nineteen"
+msgstr "dziewiętnaście"
+
+#: ../wp-math-captcha.php:515
+msgid "twenty"
+msgstr "dwadzieścia"
+
+#: ../wp-math-captcha.php:516
+msgid "thirty"
+msgstr "trzydzieści"
+
+#: ../wp-math-captcha.php:517
+msgid "forty"
+msgstr "czterdzieści"
+
+#: ../wp-math-captcha.php:518
+msgid "fifty"
+msgstr "pięćdziesiąt"
+
+#: ../wp-math-captcha.php:519
+msgid "sixty"
+msgstr "sześćdziesiąt"
+
+#: ../wp-math-captcha.php:520
+msgid "seventy"
+msgstr "siedemdziesiąt"
+
+#: ../wp-math-captcha.php:521
+msgid "eighty"
+msgstr "osiemdziesiąt"
+
+#: ../wp-math-captcha.php:522
+msgid "ninety"
+msgstr "dziewięćdziesiąt"
+
+#: ../wp-math-captcha.php:814 ../wp-math-captcha.php:815
+#: ../wp-math-captcha.php:816
+msgid "ERROR"
+msgstr "BŁĄD"
+
+#: ../wp-math-captcha.php:814 ../includes/math-captcha-cf7.php:113
+msgid "Please enter captcha value."
+msgstr "Proszę wpisać wartość."
+
+#: ../wp-math-captcha.php:815 ../includes/math-captcha-cf7.php:109
+msgid "Invalid captcha value."
+msgstr "Nieprawidłowa wartość."
+
+#: ../wp-math-captcha.php:816 ../includes/math-captcha-cf7.php:117
+msgid "Captcha time expired."
+msgstr "Upłynął czas."
+
+#: ../wp-math-captcha.php:820
+msgid "login form"
+msgstr "formularz logowania"
+
+#: ../wp-math-captcha.php:821
+msgid "registration form"
+msgstr "formularz rejestracji"
+
+#: ../wp-math-captcha.php:822
+msgid "reset password form"
+msgstr "resetowanie hasła"
+
+#: ../wp-math-captcha.php:823
+msgid "comment form"
+msgstr "komentarze"
+
+#: ../wp-math-captcha.php:824
+msgid "bbpress"
+msgstr "bbpress"
+
+#: ../wp-math-captcha.php:825
+msgid "contact form 7"
+msgstr "contact form 7"
+
+#: ../wp-math-captcha.php:829
+msgid "yes"
+msgstr "tak"
+
+#: ../wp-math-captcha.php:830
+msgid "no"
+msgstr "nie"
+
+#: ../wp-math-captcha.php:834
+msgid "addition (+)"
+msgstr "dodawanie (+)"
+
+#: ../wp-math-captcha.php:835
+msgid "subtraction (-)"
+msgstr "odejmowanie (-)"
+
+#: ../wp-math-captcha.php:836
+msgid "multiplication (&#215;)"
+msgstr "mnożenie (&#215;)"
+
+#: ../wp-math-captcha.php:837
+msgid "division (&#247;)"
+msgstr "dzielenie (&#247;)"
+
+#: ../wp-math-captcha.php:841
+msgid "numbers"
+msgstr "liczby"
+
+#: ../wp-math-captcha.php:842
+msgid "words"
+msgstr "słowa"
+
+#: ../wp-math-captcha.php:854
+msgid "Math Captcha settings"
+msgstr "Ustawienia Math Captcha"
+
+#: ../wp-math-captcha.php:855
+msgid "Enable Math Captcha for"
+msgstr "Włącz captcha dla"
+
+#: ../wp-math-captcha.php:856
+msgid "Hide for logged in users"
+msgstr "Ukryj dla zalogowanych"
+
+#: ../wp-math-captcha.php:857
+msgid "Mathematical operations"
+msgstr "Operacje matematyczne"
+
+#: ../wp-math-captcha.php:858
+msgid "Display captcha as"
+msgstr "Wyświetlaj captcha jako"
+
+#: ../wp-math-captcha.php:859
+msgid "Captcha field title"
+msgstr "Tytuł pola captcha"
+
+#: ../wp-math-captcha.php:860
+msgid "Captcha time"
+msgstr "Czas captcha"
+
+#: ../wp-math-captcha.php:861
+msgid "Deactivation"
+msgstr "Deaktywacja wtyczki"
+
+#: ../wp-math-captcha.php:881
+msgid "Select were would you like to use Math Captcha."
+msgstr "Wybierz w których miejscach chcesz używać Math Captcha"
+
+#: ../wp-math-captcha.php:902
+msgid "Would you like to hide captcha for logged in users?"
+msgstr "Czy chcesz ukryć captcha dla zalogowanych użytkowników?"
+
+#: ../wp-math-captcha.php:915
+msgid "How to entitle field with captcha?"
+msgstr "Jaki tytuł będzie miało pole z captcha?"
+
+#: ../wp-math-captcha.php:928
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr "Podaj czas (w sekundach) w jakim należy uzupełnić pole captcha."
+
+#: ../wp-math-captcha.php:949
+msgid "Delete settings on plugin deactivation"
+msgstr "Usuń wszystkie dane wtyczki podczas deaktywacji"
+
+#: ../wp-math-captcha.php:970
+msgid "Select which mathematical operations to use in your captcha."
+msgstr ""
+"Wybierz jakie rodzaje operacji matematycznych będą stosowane w captcha."
+
+#: ../wp-math-captcha.php:991
+msgid "Select how you'd like to display you captcha."
+msgstr "Wybierz w jaki sposób chcesz wyświetlać captcha."
+
+#: ../wp-math-captcha.php:1032
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr ""
+"Musisz wybrać przynajmniej jedną operację. Przywrócono domyślne ustawienie "
+"tej opcji."
+
+#: ../wp-math-captcha.php:1048
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr ""
+"Musisz wybrać przynajmniej jedną grupę. Przywrócono domyślne ustawienie tej "
+"opcji."
+
+#: ../wp-math-captcha.php:1082 ../wp-math-captcha.php:1083
+#: ../wp-math-captcha.php:1098 ../wp-math-captcha.php:1111
+#: ../includes/math-captcha-cf7.php:148
+msgid "Math Captcha"
+msgstr "Math Captcha"
+
+#: ../wp-math-captcha.php:1113
+msgid "Need support?"
+msgstr "Potrzebujesz pomocy?"
+
+#: ../wp-math-captcha.php:1114
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr "Jeśli masz jakiekolwiek problemy z tą wtyczką, powiedz o tym na"
+
+#: ../wp-math-captcha.php:1114
+msgid "Support forum"
+msgstr "Forum pomocy"
+
+#: ../wp-math-captcha.php:1116
+msgid "Do you like this plugin?"
+msgstr "Lubisz tę wtyczkę?"
+
+#: ../wp-math-captcha.php:1117
+msgid "Rate it 5"
+msgstr "Oceń ją na 5"
+
+#: ../wp-math-captcha.php:1117
+msgid "on WordPress.org"
+msgstr "na WordPress.org"
+
+#: ../wp-math-captcha.php:1118
+msgid "Blog about it & link to the"
+msgstr "Napisz o niej i dodaj link do"
+
+#: ../wp-math-captcha.php:1118
+msgid "plugin page"
+msgstr "strony wtyczki"
+
+#: ../wp-math-captcha.php:1119
+msgid "Check out our other"
+msgstr "Sprawdź nasze inne"
+
+#: ../wp-math-captcha.php:1119
+msgid "WordPress plugins"
+msgstr "wtyczki do WordPressa"
+
+#: ../wp-math-captcha.php:1172
+msgid "Support"
+msgstr "Forum pomocy"
+
+#: ../wp-math-captcha.php:1194
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../includes/math-captcha-cf7.php:160
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../includes/math-captcha-cf7.php:166
+msgid "Input field settings"
+msgstr "Ustawienia pola"
+
+#: ../includes/math-captcha-cf7.php:169 ../includes/math-captcha-cf7.php:173
+msgid "optional"
+msgstr "opcjonalne"
+
+#: ../includes/math-captcha-cf7.php:179
+msgid "Copy this code and paste it into the form left."
+msgstr "Skopij i wkej ten kod do formularza po lewej."
+
+#~ msgid ""
+#~ "Select what kind of mathematical operations will be used to generate "
+#~ "captcha."
+#~ msgstr ""
+#~ "Wybierz jakie rodzaje operacji matematycznych będą stosowane w captcha."
+
+#~ msgid "Created by"
+#~ msgstr "Stworzone przez"
+
+#~ msgid "form top"
+#~ msgstr "na górze formularza"
+
+#~ msgid "before form fields"
+#~ msgstr "przed polami formularza"
+
+#~ msgid "form bottom"
+#~ msgstr "na dole formularza"
+
+#~ msgid "after form"
+#~ msgstr "po formularzu"
+
+#~ msgid "WordPress default"
+#~ msgstr "Domyślny WordPressa"
+
+#~ msgid "Bootstrap"
+#~ msgstr "Bootstrap"
+
+#~ msgid "do not hide"
+#~ msgstr "nie ukrywaj"
+
+#~ msgid "1 second"
+#~ msgstr "1 sekunda"
+
+#~ msgid "2 seconds"
+#~ msgstr "2 sekundy"
+
+#~ msgid "3 seconds"
+#~ msgstr "3 sekundy"
+
+#~ msgid "5 seconds"
+#~ msgstr "5 sekund"
+
+#~ msgid "10 seconds"
+#~ msgstr "10 sekund"
+
+#~ msgid "fade"
+#~ msgstr "zanikanie"
+
+#~ msgid "slide"
+#~ msgstr "zjeżdżanie"
+
+#~ msgid "approved"
+#~ msgstr "zatwierdzone"
+
+#~ msgid "unapproved"
+#~ msgstr "niezatwierdzone"
+
+#~ msgid "trash"
+#~ msgstr "w koszu"
+
+#~ msgid "spam"
+#~ msgstr "spam"
+
+#~ msgid "Inline Edit"
+#~ msgstr "Edycja"
+
+#~ msgid "Messages"
+#~ msgstr "Komunikaty"
+
+#~ msgid "Edit"
+#~ msgstr "Edytuj"
+
+#~ msgid "Save"
+#~ msgstr "Zapisz"
+
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+
+#~ msgid "Time remaining"
+#~ msgstr "Pozostały czas"
+
+#~ msgid "Delete"
+#~ msgstr "Usuń"
+
+#~ msgid "Unapprove"
+#~ msgstr "Odrzuć"
+
+#~ msgid "Spam"
+#~ msgstr "Oznacz jako spam"
+
+#~ msgid "Trash"
+#~ msgstr "Kosz"
+
+#~ msgid "Approve"
+#~ msgstr "Zatwierdź"
+
+#~ msgid "Restore"
+#~ msgstr "Przywróć"
+
+#~ msgid "Unspam"
+#~ msgstr "Odznacz spam"
+
+#~ msgid "Comments statuses"
+#~ msgstr "Statusy komentarzy"
+
+#~ msgid "Comment Edit Timer"
+#~ msgstr "Edycja komentarza"
+
+#~ msgid "Editing time"
+#~ msgstr "Czas edycji"
+
+#~ msgid "Delete permanently button"
+#~ msgstr "Przycisk Usuń"
+
+#~ msgid "Edit comment effect"
+#~ msgstr "Efekt przy edycji komentarza"
+
+#~ msgid "CSS style"
+#~ msgstr "Styl CSS"
+
+#~ msgid "Show on hover"
+#~ msgstr "Pokaż po najechaniu"
+
+#~ msgid "Highlight comments"
+#~ msgstr "Podświetlanie komentarzy"
+
+#~ msgid "Highlight colors"
+#~ msgstr "Kolory podświetlenia"
+
+#~ msgid "Messages Settings"
+#~ msgstr "Ustawienia komunikatów"
+
+#~ msgid "Message box position for logged in users"
+#~ msgstr "Pozycja pola z komunikatami dla zalogowanych użytkowników"
+
+#~ msgid "Message box position for logged out users"
+#~ msgstr "Pozycja pola z komunikatami dla niezalogowanych użytkowników"
+
+#~ msgid "Show message effect"
+#~ msgstr "Efekt wyświetlania komunikatów"
+
+#~ msgid "Hide message effect"
+#~ msgstr "Efekt ukrywania komunikatów"
+
+#~ msgid "Hide message after"
+#~ msgstr "Ukrywanie komunikatów po"
+
+#~ msgid ""
+#~ "Comment timer allows users to edit their comments for specified time."
+#~ msgstr ""
+#~ "Stoper komentarza pozwala użytkownikom na edycję ich komentarzy przez "
+#~ "określony czas."
+
+#~ msgid "How much time (in minutes) a user has to edit a published comment"
+#~ msgstr ""
+#~ "Jak długo (w minutach) użtkownik może edytować opublikowany komentarz"
+
+#~ msgid "Pick highlight colors for specific comment statuses"
+#~ msgstr "Wybierz kolory podświetlenia określonych statusów komentarzy"
+
+#~ msgid "Highlight comments with specific colors"
+#~ msgstr "Podświetl komentarze określonym kolorem"
+
+#~ msgid "Show inline edit actions only on hovering over a comment"
+#~ msgstr "Wyświetl przyciski tylko po najechaniu myszką na komentarz"
+
+#~ msgid ""
+#~ "Select comments of which statuses will be available for moderation on the "
+#~ "front-end of your site"
+#~ msgstr ""
+#~ "Wybierz statusy komentarzy, które będą dostępne do moderacji na stronie"
+
+#~ msgid ""
+#~ "This will add Delete to edit buttons that allows you to permanently "
+#~ "delete comments"
+#~ msgstr ""
+#~ "Zostanie dodany przycisk Usuń do przycików edycji, który umożliwia trwałe "
+#~ "usunięcie komentarzy"
+
+#~ msgid "Select animation for showing messages"
+#~ msgstr "Wybierz animację przy wyświetlaniu komunikatów"
+
+#~ msgid "Select animation for hiding messages"
+#~ msgstr "Wybierz animację przy ukrywaniu komunikatów"
+
+#~ msgid "Select animation effect for edit comment"
+#~ msgstr "Wybierz animację przy edycji komentarza"
+
+#~ msgid "Choose your message box style"
+#~ msgstr "Wybierz styl dla pola z komunikatami"
+
+#~ msgid "Select style for Inline Edit buttons"
+#~ msgstr "Wybierz styl dla przycisków edycji"
+
+#~ msgid "Select for how long message box should be displayed"
+#~ msgstr "Wybierz przez jaki czas ma być wyświetlany komunikat"
+
+#~ msgid "Select message box position for logged in users"
+#~ msgstr "Wybierz pozycję pola z komunikatami dla zalogowanych użytkowników"
+
+#~ msgid "Select message box position for logged out users"
+#~ msgstr ""
+#~ "Wybierz pozycję pola z komunikatami dla niezalogowanych użytkowników"
+
+#~ msgid "Ajaxed Comments"
+#~ msgstr "Komentarze Ajax"
+
+#~ msgid "Ajaxed Comments Settings"
+#~ msgstr "Ustawienia komentarzy Ajax"
+
+#~ msgid "Error has occurred. Please try again later or reload a page."
+#~ msgstr ""
+#~ "Wystąpił nieznany błąd. Proszę spróbować później lub odświeżyć stronę."
+
+#~ msgid "Comment is empty."
+#~ msgstr "Komentarz jest pusty."
+
+#~ msgid "Are you sure you want to delete this comment?"
+#~ msgstr "Jesteś pewny, że chcesz usunąć ten komentarz."
+
+#~ msgid "Unknown error has occurred."
+#~ msgstr "Wystąpił nieznany błąd."
+
+#~ msgid "Widgets"
+#~ msgstr "Widgety"
+
+#~ msgid "Custom Post Types"
+#~ msgstr "Własne typy wpisów"
+
+#~ msgid "Custom Post Type Archives"
+#~ msgstr "Archiwa własnych typów wpisów"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorie"
+
+#~ msgid "Taxonomies"
+#~ msgstr "Taksonomie"
+
+#~ msgid "Others"
+#~ msgstr "Inne"
+
+#~ msgid "Users"
+#~ msgstr "Użytkownicy"
+
+#~ msgid "Languages"
+#~ msgstr "Języki"
+
+#~ msgid "Front Page"
+#~ msgstr "Strona główna"
+
+#~ msgid "Blog Page"
+#~ msgstr "Strona z wpisami"
+
+#~ msgid "Single Posts"
+#~ msgstr "Pojedyncze wpisy"
+
+#~ msgid "Sticky Posts"
+#~ msgstr "Wpisy przyklejone"
+
+#~ msgid "Author Archive"
+#~ msgstr "Archiwum autora"
+
+#~ msgid "Date Archive"
+#~ msgstr "Archiwum daty"
+
+#~ msgid "404 Page"
+#~ msgstr "Strona błędów 404"
+
+#~ msgid "Search Page"
+#~ msgstr "Strona wyszukiwania"
+
+#~ msgid "Logged out users"
+#~ msgstr "Wylogowani użytkownicy"
+
+#~ msgid "Restrict widgets"
+#~ msgstr "Ograniczenia widgetów"
+
+#~ msgid ""
+#~ "Use this settings to manage access to widgets page and to restrict "
+#~ "availability of certain widgets, sidebars and widgets options to site "
+#~ "administrators only."
+#~ msgstr ""
+#~ "Użyj tych ustawień aby określić kto może mieć dostęp do widgetów, jakie "
+#~ "widgety, panele boczne i ustawienia widgetów są dostępne dla użytkowników "
+#~ "a jakie tylko dla administratorów."
+
+#~ msgid "Restrict Users"
+#~ msgstr "Ograniczenia użytkowników"
+
+#~ msgid "Select user roles restricted to manage widgets."
+#~ msgstr "Wybierz role użytkowników, którzy mogą zarządzać widgetami."
+
+#~ msgid "Restrict Sidebars"
+#~ msgstr "Ograniczenia paneli bocznych"
+
+#~ msgid "Select which sidebars will be restricted to admins only."
+#~ msgstr ""
+#~ "Wybierz panele boczne, które będą dostępne tylko dla administratorów."
+
+#~ msgid "Restrict Widgets"
+#~ msgstr "Ograniczenia widgetów"
+
+#~ msgid "Select which widgets will be restricted to admins only."
+#~ msgstr "Wybierz widgety, któe będą dostępne tylko dla administratorów."
+
+#~ msgid "Restrict Widget Options"
+#~ msgstr "Ograniczenia opcji widgetów"
+
+#~ msgid "Select which widget options will be restricted to admins only."
+#~ msgstr ""
+#~ "Wybierz które opcje widgetów, będą dostępne tylko dla administratorów."
+
+#~ msgid "Restrict Option Groups"
+#~ msgstr "Ograniczenia grup opcji"
+
+#~ msgid "Display widget options in groups"
+#~ msgstr "Wyświetl opcje widgetów w grupach"
+
+#~ msgid "Single %s"
+#~ msgstr "Pojedyncze %s"
+
+#~ msgid "%s Archive"
+#~ msgstr "Archiwum %s"
+
+#~ msgid "Display / Hide Widget"
+#~ msgstr "Wyświetl / Ukryj widget"
+
+#~ msgid "Display widget on selected"
+#~ msgstr "Wyświetl widget na wybranych stronach"
+
+#~ msgid "Hide widget on selected"
+#~ msgstr "Ukryj widget na wybranych stronach"

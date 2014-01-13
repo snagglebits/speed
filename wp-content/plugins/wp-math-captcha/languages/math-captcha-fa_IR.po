@@ -1,0 +1,344 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: math-captcha\n"
+"POT-Creation-Date: 2013-07-09 20:29+0330\n"
+"PO-Revision-Date: 2013-07-09 20:46+0330\n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: Alimir.ir <info@alimir.ir>\n"
+"Language: Persian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-math-captcha.php:546
+msgid "one"
+msgstr "یک"
+
+#: ../wp-math-captcha.php:547
+msgid "two"
+msgstr "دو"
+
+#: ../wp-math-captcha.php:548
+msgid "three"
+msgstr "سه"
+
+#: ../wp-math-captcha.php:549
+msgid "four"
+msgstr "چهار"
+
+#: ../wp-math-captcha.php:550
+msgid "five"
+msgstr "پنج"
+
+#: ../wp-math-captcha.php:551
+msgid "six"
+msgstr "شش"
+
+#: ../wp-math-captcha.php:552
+msgid "seven"
+msgstr "هفت"
+
+#: ../wp-math-captcha.php:553
+msgid "eight"
+msgstr "هشت"
+
+#: ../wp-math-captcha.php:554
+msgid "nine"
+msgstr "نه"
+
+#: ../wp-math-captcha.php:555
+msgid "ten"
+msgstr "ده"
+
+#: ../wp-math-captcha.php:556
+msgid "eleven"
+msgstr "یازده"
+
+#: ../wp-math-captcha.php:557
+msgid "twelve"
+msgstr "دوازده"
+
+#: ../wp-math-captcha.php:558
+msgid "thirteen"
+msgstr "سیزده"
+
+#: ../wp-math-captcha.php:559
+msgid "fourteen"
+msgstr "چهارده"
+
+#: ../wp-math-captcha.php:560
+msgid "fifteen"
+msgstr "پانزده"
+
+#: ../wp-math-captcha.php:561
+msgid "sixteen"
+msgstr "شانزده"
+
+#: ../wp-math-captcha.php:562
+msgid "seventeen"
+msgstr "هفده"
+
+#: ../wp-math-captcha.php:563
+msgid "eighteen"
+msgstr "هجده"
+
+#: ../wp-math-captcha.php:564
+msgid "nineteen"
+msgstr "نوزده"
+
+#: ../wp-math-captcha.php:565
+msgid "twenty"
+msgstr "بیست"
+
+#: ../wp-math-captcha.php:566
+msgid "thirty"
+msgstr "سی"
+
+#: ../wp-math-captcha.php:567
+msgid "forty"
+msgstr "چهل"
+
+#: ../wp-math-captcha.php:568
+msgid "fifty"
+msgstr "پنجاه"
+
+#: ../wp-math-captcha.php:569
+msgid "sixty"
+msgstr "شصت"
+
+#: ../wp-math-captcha.php:570
+msgid "seventy"
+msgstr "هفتاد"
+
+#: ../wp-math-captcha.php:571
+msgid "eighty"
+msgstr "هشتاد"
+
+#: ../wp-math-captcha.php:572
+msgid "ninety"
+msgstr "نود"
+
+#: ../wp-math-captcha.php:873 ../wp-math-captcha.php:874
+#: ../wp-math-captcha.php:875
+msgid "ERROR"
+msgstr "خطا"
+
+#: ../wp-math-captcha.php:873 ../includes/math-captcha-cf7.php:113
+msgid "Please enter captcha value."
+msgstr "لطفا کد امنیتی را وارد کنید."
+
+#: ../wp-math-captcha.php:874 ../includes/math-captcha-cf7.php:109
+msgid "Invalid captcha value."
+msgstr "کد امنیتی وارد شده اشتباه است"
+
+#: ../wp-math-captcha.php:875 ../includes/math-captcha-cf7.php:117
+msgid "Captcha time expired."
+msgstr "فرصت وارد کردن کد امنیتی به اتمام رسید."
+
+#: ../wp-math-captcha.php:879
+msgid "login form"
+msgstr "فرم ورود"
+
+#: ../wp-math-captcha.php:880
+msgid "registration form"
+msgstr "فرم عضویت"
+
+#: ../wp-math-captcha.php:881
+msgid "reset password form"
+msgstr "بازیابی رمز عبور"
+
+#: ../wp-math-captcha.php:882
+msgid "comment form"
+msgstr "فرم دیدگاه ها"
+
+#: ../wp-math-captcha.php:883
+msgid "bbpress"
+msgstr "بی بی پرس"
+
+#: ../wp-math-captcha.php:884
+msgid "contact form 7"
+msgstr "فرم تماس 7"
+
+#: ../wp-math-captcha.php:888
+msgid "yes"
+msgstr "بله"
+
+#: ../wp-math-captcha.php:889
+msgid "no"
+msgstr "خیر"
+
+#: ../wp-math-captcha.php:893
+msgid "addition (+)"
+msgstr "جمع (+)"
+
+#: ../wp-math-captcha.php:894
+msgid "subtraction (-)"
+msgstr "تفریق (-)"
+
+#: ../wp-math-captcha.php:895
+msgid "multiplication (&#215;)"
+msgstr "ضرب (&#215;)"
+
+#: ../wp-math-captcha.php:896
+msgid "division (&#247;)"
+msgstr "تقسیم (&#247;)"
+
+#: ../wp-math-captcha.php:900
+msgid "numbers"
+msgstr "اعداد"
+
+#: ../wp-math-captcha.php:901
+msgid "words"
+msgstr "حروف"
+
+#: ../wp-math-captcha.php:913
+msgid "Math Captcha settings"
+msgstr "بخش تنظیمات کپچای ریاضیاتی"
+
+#: ../wp-math-captcha.php:914
+msgid "Enable Math Captcha for"
+msgstr "فعال سازی کد امنیتی برای:"
+
+#: ../wp-math-captcha.php:915
+msgid "Hide for logged in users"
+msgstr "پنهان نمودن کد برای کاربران وارد شده"
+
+#: ../wp-math-captcha.php:916
+msgid "Mathematical operations"
+msgstr "عملگرهای ریاضیاتی"
+
+#: ../wp-math-captcha.php:917
+msgid "Display captcha as"
+msgstr "نمایش کپچا به صورت"
+
+#: ../wp-math-captcha.php:918
+msgid "Captcha field title"
+msgstr "عنوان فیلد کپچا"
+
+#: ../wp-math-captcha.php:919
+msgid "Captcha time"
+msgstr "زمان دهی"
+
+#: ../wp-math-captcha.php:939
+msgid "Select were would you like to use Math Captcha."
+msgstr "محل استفاده ی کپچای ریاضیاتی را مشخص کنید."
+
+#: ../wp-math-captcha.php:960
+msgid "Would you like to hide captcha for logged in users?"
+msgstr "آیا می خواهید کد امنیتی از دید کاربران وارد  شده مخفی بماند؟"
+
+#: ../wp-math-captcha.php:973
+msgid ""
+"Select what kind of mathematical operations will be used to generate captcha."
+msgstr "عنوانی را برای فیلد کپچا انتخاب کنید."
+
+#: ../wp-math-captcha.php:986
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr "مهلت زمانیه وارد کردن کد امنیتی را برای کاربر مشخص کنید (به ثانیه)"
+
+#: ../wp-math-captcha.php:1007
+msgid "Select which mathematical operations to use in your captcha."
+msgstr ""
+"عملگرهای ریاضیاتی ای را که می خواهید در تولید کد امنیتی استفاده شوند، انتخاب "
+"کنید."
+
+#: ../wp-math-captcha.php:1028
+msgid "Select how you'd like to display you captcha."
+msgstr "نحوه ی نمایش دلخواه خود را برای کپچا انتخاب کنید."
+
+#: ../wp-math-captcha.php:1073
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr ""
+
+#: ../wp-math-captcha.php:1089
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr ""
+
+#: ../wp-math-captcha.php:1119 ../wp-math-captcha.php:1120
+#: ../wp-math-captcha.php:1135 ../wp-math-captcha.php:1148
+#: ../includes/math-captcha-cf7.php:148
+msgid "Math Captcha"
+msgstr "کپچای ریاضیاتی"
+
+#: ../wp-math-captcha.php:1150
+msgid "Need support?"
+msgstr "نیاز به پشتیبانی دارید؟"
+
+#: ../wp-math-captcha.php:1151
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr ""
+"اگر مشکلی با این افزونه دارید می توانید آن را در انجمن پشتیبانی به آدرس "
+"روبرو در میان بگذارید:"
+
+#: ../wp-math-captcha.php:1151
+msgid "Support forum"
+msgstr "ورود به انجمن پشتیبانی"
+
+#: ../wp-math-captcha.php:1153
+msgid "Do you like this plugin?"
+msgstr "آیا از این افزونه راضی هستید؟"
+
+#: ../wp-math-captcha.php:1154
+msgid "Rate it 5"
+msgstr "امتیاز دهی"
+
+#: ../wp-math-captcha.php:1154
+msgid "on WordPress.org"
+msgstr "به افزونه در مخزن وردپرس"
+
+#: ../wp-math-captcha.php:1155
+msgid "Blog about it & link to the"
+msgstr "مشاهده مشخصات بیشتر در"
+
+#: ../wp-math-captcha.php:1155
+msgid "plugin page"
+msgstr "صفحه ی افزونه"
+
+#: ../wp-math-captcha.php:1156
+msgid "Check out our other"
+msgstr "مشاهده ی دیگر"
+
+#: ../wp-math-captcha.php:1156
+msgid "WordPress plugins"
+msgstr "افزونه های وردپرسی ما"
+
+#: ../wp-math-captcha.php:1209
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: ../wp-math-captcha.php:1231
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: ../includes/math-captcha-cf7.php:160
+msgid "Name"
+msgstr "نام"
+
+#: ../includes/math-captcha-cf7.php:166
+msgid "Input field settings"
+msgstr "تنظیمات فیلد ورودی"
+
+#: ../includes/math-captcha-cf7.php:169 ../includes/math-captcha-cf7.php:173
+msgid "optional"
+msgstr "اختیاری"
+
+#: ../includes/math-captcha-cf7.php:179
+msgid "Copy this code and paste it into the form left."
+msgstr ""
+
+#~ msgid "Edited & Translated by"
+#~ msgstr " ویرایش و فارسی سازی در"
+
+#~ msgid "wordpress and programming world"
+#~ msgstr "دنیای وردپرس و برنامه نویسی"
