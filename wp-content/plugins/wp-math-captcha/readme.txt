@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: antispam, capcha, captcha, captha, catcha, comment, comments, spam, security, login, lost password, math captcha, registration, cf7, contact, contact forms, form, contact form 7, bbpress
 Requires at least: 3.3
-Tested up to: 3.6.1
-Stable tag: 1.0.9
+Tested up to: 3.8
+Stable tag: 1.1.0
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -23,6 +23,7 @@ For more information, check out the [plugin page](http://www.dfactory.eu/plugins
 * Select which mathematical operation to use
 * Displaying captcha as numbers and/or words
 * Multiple captcha on one page support
+* Block spambots direct access to wp-comments-post.php
 * Option to set captcha field title
 * Option to set captcha input time
 * .pot file for translations included
@@ -55,6 +56,10 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.1.0 =
+* New: Option to block spambots direct access to wp-comments-post.php
+* New: Basic CSS styling of Math Captcha fields
 
 = 1.0.9 =
 * New: Multiple Math Captcha on one page support
@@ -96,5 +101,6 @@ No questions yet.
 
 == Upgrade Notice ==
 
-= 1.0.9 =
-Chinese translation, fixed errors for CF7 and multiple Math Cpatchas on one page support
+= 1.1.0 =
+* New: Option to block spambots direct access to wp-comments-post.php
+* New: Basic CSS styling of Math Captcha fields
