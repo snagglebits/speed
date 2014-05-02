@@ -206,9 +206,9 @@ if (!function_exists('event_espresso_additional_attendees')) {
 			</a></div>';
 			
 			$attendee_form .= '
-			<div class="additional-attendee-div"><a id="add-additional-attendee-XXXXXX" rel="XXXXXX" class="add-additional-attendee-lnk additional-attendee-lnk ui-priority-primary " title="' . __('Add Additonal Attendee', 'event_espresso') . '">
-				<img src="' . EVENT_ESPRESSO_PLUGINFULLURL . 'images/icons/add.png" alt="' . __('Add Additonal Attendee', 'event_espresso') . '" />
-				' . __('Add Additonal Attendee', 'event_espresso') . '
+			<div class="additional-attendee-div"><a id="add-additional-attendee-XXXXXX" rel="XXXXXX" class="add-additional-attendee-lnk additional-attendee-lnk ui-priority-primary " title="' . __('Add Additional Attendee', 'event_espresso') . '">
+				<img src="' . EVENT_ESPRESSO_PLUGINFULLURL . 'images/icons/add.png" alt="' . __('Add Additional Attendee', 'event_espresso') . '" />
+				' . __('Add Additional Attendee', 'event_espresso') . '
 			</a></div>';
 
 
@@ -217,7 +217,7 @@ if (!function_exists('event_espresso_additional_attendees')) {
 			wp_register_script( 'espresso_add_reg_attendees', EVENT_ESPRESSO_PLUGINFULLURL . 'scripts/espresso_add_reg_attendees.js', array('jquery'), '0.1', TRUE );
 			wp_enqueue_script( 'espresso_add_reg_attendees' );
 
-			$espresso_add_reg_attendees = array( 'additional_limit' => $additional_limit, 'attendee_form' => stripslashes( $attendee_form ));
+			$espresso_add_reg_attendees = array( 'additional_limit' => min( $additional_limit, $available_spaces ), 'attendee_form' => stripslashes( $attendee_form ));
 			wp_localize_script( 'espresso_add_reg_attendees', 'espresso_add_reg_attendees', $espresso_add_reg_attendees );		
 		}
 		return $html;
@@ -343,6 +343,11 @@ if (!function_exists('event_espresso_get_is_active')) {
 			$sql .= "LEFT JOIN " . EVENTS_START_END_TABLE . " ese ON ese.event_id = e.id ";
 			$sql .= "WHERE e.id = '" . $event_id . "' LIMIT 0,1";
 			$events = $wpdb->get_results($sql);
+			if (empty($events)) {
+				$event_status = array('status' => 'INVALID', 'display' => '<span style="color: #000; font-weight:bold;">' . __('INVALID', 'event_espresso') . '</span>', 'display_custom' => '<span class="espresso_deleted">' . __('Invalid', 'event_espresso') . '</span>');
+				//print_r( $event_status);
+				return $event_status;
+			}
 			$start_date = $wpdb->last_result[0]->start_date;
 			$is_active = $wpdb->last_result[0]->is_active;
 			$event_status = $wpdb->last_result[0]->event_status;
@@ -467,6 +472,7 @@ if (!function_exists('event_espresso_get_status')) {
 			case 'DELETED':
 			case 'REGISTRATION_CLOSED':
 			case 'DENIED':
+			case 'INVALID':
 				//case 'REGISTRATION_NOT_OPEN':
 				return 'NOT_ACTIVE';
 				break;
@@ -718,7 +724,7 @@ function event_espresso_update_alert($url = '') {
 
 function espresso_registration_footer() {
 	global $espresso_premium, $org_options;
-	$url = (!isset($org_options['affiliate_id']) || $org_options['affiliate_id'] == '' || $org_options['affiliate_id'] == 0) ? 'http://eventespresso.com/?utm_source=ee_plugin_admin&utm_medium=link&utm_content=Event+Registration+and+Ticketing+Powered+by+ee_version_'.EVENT_ESPRESSO_VERSION .'&utm_campaign=espresso_admin_footer' : 'https://www.e-junkie.com/ecom/gb.php?cl=113214&c=ib&aff=' . $org_options['affiliate_id'];
+	$url = (!isset($org_options['affiliate_id']) || $org_options['affiliate_id'] == '' || $org_options['affiliate_id'] == 0) ? 'http://eventespresso.com/' : 'https://www.e-junkie.com/ecom/gb.php?cl=113214&c=ib&aff=' . $org_options['affiliate_id'];
 	if ($espresso_premium != true || (isset($org_options['show_reg_footer']) && $org_options['show_reg_footer'] == 'Y')) {
 		return '<p style="font-size: 12px;"><a href="' . $url . '" title="Event Registration Powered by Event Espresso" target="_blank">Event Registration and Ticketing</a> Powered by <a href="' . $url . '" title="Event Espresso - Event Registration and Management System for WordPress" target="_blank">Event Espresso</a></p>';
 	}
@@ -885,7 +891,8 @@ if (!function_exists('espresso_registration_id')) {
 
 	function espresso_registration_id($attendee_id) {
 		global $wpdb;
-		$sql = $wpdb->get_results("SELECT registration_id FROM " . EVENTS_ATTENDEE_TABLE . " WHERE id ='" . $wpdb->escape($attendee_id) . "'");
+		$SQL = "SELECT registration_id FROM " . EVENTS_ATTENDEE_TABLE . " WHERE id =%d ";
+		$wpdb->get_results($wpdb->prepare( $SQL, $attendee_id ));
 		$num_rows = $wpdb->num_rows;
 
 		if ($num_rows > 0) {
@@ -901,7 +908,8 @@ if (!function_exists('espresso_attendee_id')) {
 
 	function espresso_attendee_id($registration_id) {
 		global $wpdb;
-		$sql = $wpdb->get_results("SELECT id FROM " . EVENTS_ATTENDEE_TABLE . " WHERE registration_id ='" . $wpdb->escape($registration_id) . "'");
+		$SQL = "SELECT id FROM " . EVENTS_ATTENDEE_TABLE . " WHERE registration_id =%s ";
+		$wpdb->get_results($wpdb->prepare( $SQL, $registration_id ));
 		$num_rows = $wpdb->num_rows;
 
 		if ($num_rows > 0) {
@@ -1021,7 +1029,7 @@ function espresso_unserialize($data, $return_format = '') {
 }
 
 //Checks to see if the array is multidimensional
-function is_multi($array) {
+function espresso_is_multi($array) {
 	return (count($array) != count($array, 1));
 }
 
@@ -1423,7 +1431,7 @@ if (!function_exists('espresso_display_featured_image')) {
 		$class = empty($class) ? 'ee-featured-image' : $class;
 		$title = empty($title) ? __('Featured Image', 'event_espresso') : $title;
 		$align = empty($align) ? 'right' : $align;
-		$output = '<div class="' . $class . '" id="espresso_featured_image-'.$event_id.'"><img title="' . $title . '" src="'.$image_url.'" /></div>';
+		$output = '<div class="' . $class . '" id="espresso_featured_image-'.$event_id.'"><a href="'.espresso_reg_url($event_id).'"><img title="' . $title . '" src="'.$image_url.'" /></a></div>';
 		return $output; 
 	}
 }

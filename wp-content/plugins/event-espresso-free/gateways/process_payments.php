@@ -53,16 +53,18 @@ function espresso_get_total_cost($payment_data) {
 		$payment_data['attendee_session']=$session_id;
 	}
 	//find all the attendee rows
-	$sql = "SELECT a.final_price, a.quantity FROM " . EVENTS_ATTENDEE_TABLE . " a ";
+	$sql = "SELECT a.final_price, a.quantity, a.amount_pd FROM " . EVENTS_ATTENDEE_TABLE . " a ";
 	$sql .= " WHERE a.attendee_session='" . $payment_data['attendee_session'] . "' ORDER BY a.id ASC";
 	$tickets = $wpdb->get_results($sql, ARRAY_A);
 	$total_cost = 0;
 	$total_quantity = 0;
+	$amount_pd = 0;
 	
 	//sum up their final_prices, as this should already take into account discounts
 	foreach ($tickets as $ticket) {
 		$total_cost += $ticket['quantity'] * $ticket['final_price'];
 		$total_quantity += $ticket['quantity'];
+		$amount_pd += $ticket['amount_pd'];
 	}
 	
 //	if (!empty($tickets[0]['coupon_code_price'])) {
@@ -77,6 +79,8 @@ function espresso_get_total_cost($payment_data) {
 	
 	$payment_data['total_cost'] = number_format( $total_cost, 2, '.', '' );
 	$payment_data['quantity'] = $total_quantity;
+	$payment_data['amount_pd'] = number_format( $amount_pd, 2, '.', '' );
+	$payment_data['amount_owed'] = number_format( $total_cost-$amount_pd, 2, '.', '');
 	//printr( $payment_data, '$payment_data' );
 	return $payment_data;
 }
@@ -124,10 +128,11 @@ function espresso_update_attendee_payment_status_in_db($payment_data) {
 			'txn_type' 					=> $payment_data['txn_type'],
 			'txn_id' 						=> $payment_data['txn_id'],
 			'payment_date' 		=> $payment_data['payment_date'],
-			'transaction_details' 	=> $payment_data['txn_details']
+			'transaction_details' 	=> $payment_data['txn_details'],
+			'date'=>current_time('mysql')
 		), 
 		array( 'attendee_session' => $payment_data['attendee_session'] ), 
-		array( '%s', '%s', '%s', '%s', '%s' ),
+		array( '%s', '%s', '%s', '%s', '%s','%s' ),
 		array( '%s' ) 
 	);	
 	
@@ -191,7 +196,7 @@ function event_espresso_txn() {
 		if( espresso_return_reg_id() == false || $payment_data['registration_id'] != espresso_return_reg_id()) {
 			wp_die(__('There was a problem finding your Registration ID', 'event_espresso'));
 		}
-		if ( $payment_data['payment_status'] != 'Completed' && $payment_data['payment_status'] != 'Refund' ) {
+		if ( $payment_data['amount_owed'] > 0.00 && $payment_data['payment_status'] != 'Refund' ) {
 			$payment_data = apply_filters('filter_hook_espresso_transactions_get_payment_data', $payment_data);
 			espresso_log::singleton()->log(array('file' => __FILE__, 'function' => __FUNCTION__, 'status' => 'Payment for: '. $payment_data['lname'] . ', ' . $payment_data['fname'] . '|| registration id: ' . $payment_data['registration_id'] . '|| transaction details: ' . (isset($payment_data['txn_details']) ? $payment_data['txn_details'] : '')));
 
@@ -209,6 +214,9 @@ function event_espresso_txn() {
 		}
 	}
 	$_REQUEST['page_id'] = $org_options['return_url'];
+	//include payment_page as it contains the next function we're going to call
+	require_once(EVENT_ESPRESSO_INCLUDES_DIR . "process-registration/payment_page.php"); 
+	event_espresso_clear_session_of_attendee($payment_data['attendee_session']);
 	ee_init_session();
 
 	$espresso_content = ob_get_contents();
@@ -259,3 +267,36 @@ if ( isset( $_POST[ 'name' ] ) && isset( $_POST[ 'MC_type'] ) && 'worldpay' == $
 	unset($_REQUEST['name']);
 }
 
+
+/**
+ * Builds strings which can be used for the notify_url, return_url, etc which are sent to gateways.
+ * 
+ * @param string $type usually either 'notify_url','return_url', or 'cancel_url' (keys in the global $org_options
+ * @param array $payment_data specifically, this array should contain keys 'attendee_id', 'registration_id', 
+ * @param string $gateway_slug name of teh gateway folder, eg 'paypal','mwarrior','eway_rapid3' etc. This is used to get the gateway's option, that option should have a key 'force_ssl_return',
+ * @param array $extra_args any extra querystring args to be added to the URL.
+ * @return string which can be sent to the gateway
+ */
+function espresso_build_gateway_url($type, $payment_data, $gateway_slug, $extra_args = array() ){
+	global $org_options;
+	$url = get_permalink($org_options[$type]);
+	$gateway_settings = get_option("event_espresso_{$gateway_slug}_settings");
+	if($gateway_settings['force_ssl_return']){
+		$url = str_replace("http://","https://",$url);
+	}
+	
+	$query_args = array(
+		'id'=>$payment_data['attendee_id'],
+		'r_id'=>$payment_data['registration_id'],
+		'type'=>$gateway_slug
+	);
+	switch($type){
+		case 'notify_url':
+		case 'return_url':
+			$query_args['attendee_action']='post_payment';
+			$query_args['form_action']='payment';
+	}
+	$query_args = array_merge($query_args,$extra_args);
+	$full_url = add_query_arg($query_args,$url);
+	return $full_url;
+}

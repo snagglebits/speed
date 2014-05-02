@@ -31,6 +31,9 @@ background: #FFB119;
 #secondary {
 		width: 162px;
 	}
+.site:before {
+		width: 0px;
+	}
 <!-- Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/ -->
 <!-- CSS -->
 
