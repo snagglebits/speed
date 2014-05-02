@@ -135,7 +135,7 @@ if (!function_exists('event_espresso_delete_event')) {
 			  event_espresso_send_cancellation_notice($event_id);
 			  } */
 
-//Add an option in general settings for the following?
+			//Add an option in general settings for the following?
 			/* if (event_espresso_get_status($event_id) == 'ACTIVE') {
 			  event_espresso_send_cancellation_notice($event_id);
 			  } */
@@ -1739,6 +1739,61 @@ function ee_core_load_pue_update() {
 				}
 			}
 
+			//MER active? 1 if yes. not set if not.
+			$active_plugins = get_option('active_plugins');
+			if ( preg_match('/espresso-multi-registration/', implode(',', $active_plugins ) ) )
+				$extra_stats['MER_active'] = 1;
+
+			//calendar active? considered active if the calendar page has been loaded in the past week (we use the espresso_calendar shortcode for this check)
+			//if it is active (meeting the criteria), we send the timestamp.  if it isn't then we dont' set.
+			$active_calendar = get_option('uxip_ee_calendar_active');
+			if ( strtotime('+ 1week', (int) $active_calendar) >= time() ) {
+				$extra_stats['calendar_active'] = $active_calendar;
+			}
+
+
+			//ticketing addon in use?  considered active if "espresso_ticket_launch" has been called with the corresponding _REQUEST var that triggers ticket generation.
+			//if it is active we send the timestamp for the last time a ticket was generated.  If NOT active we don't set.
+			$active_ticketing = get_option('uxip_ee_ticketing_active');
+			if ( !empty( $active_ticketing ) )
+				$extra_stats['ticketing_active'] = $active_ticketing;
+
+			
+			//REM active? if there are any recurring events present then its in use.
+			//if IS active then we return the count of recurring events.
+			$active_rem = get_option('uxip_ee_rem_active');
+			if ( !empty( $active_rem ) )
+				$extra_stats['rem_active'] = $active_rem;
+
+
+			//seating chart active?  if there are any seating charts attached to an even then its considered active and we'll send along the count of seating charts in use.  Otherwise nothing is sent.
+			$active_sc = get_option('uxip_ee_seating_chart_active');
+			if ( !empty( $active_sc ) )
+				$extra_stats['seating_chart_active'] = $active_sc;
+
+			//member only events being run?
+			$member_only_events = get_option('uxip_ee_members_events');
+			if ( !empty( $member_only_events ) )
+				$extra_stats['member_only_events'] = $member_only_events;
+
+
+			//what is the current active theme?
+			$active_theme = get_option('uxip_ee_active_theme');
+			if ( !empty( $active_theme ) )
+				$extra_stats['active_theme'] = $active_theme;
+
+			//event info regarding an all event count and all "active" event count
+			$all_events_count = get_option('uxip_ee_all_events_count');
+			if ( !empty( $all_events_count ) )
+				$extra_stats['all_events_count'] = $all_events_count;
+			$active_events_count = get_option('uxip_ee_active_events_count');
+			if ( !empty( $active_events_count ) )
+				$extra_stats['active_events_count'] = $active_events_count;
+
+			//phpversion checking
+			$extra_stats['phpversion'] = function_exists('phpversion') ? phpversion() : 'unknown';
+
+
 			//set transient
 			set_transient( 'ee_extra_data', $extra_stats, WEEK_IN_SECONDS );
 		}
@@ -1748,8 +1803,11 @@ function ee_core_load_pue_update() {
 			require(EVENT_ESPRESSO_PLUGINFULLPATH . 'class/pue/pue-client.php' );
 			$api_key = isset($org_options['site_license_key']) ? $org_options['site_license_key'] : '';
 			$host_server_url = 'http://eventespresso.com'; //this needs to be the host server where plugin update engine is installed.
-			$plugin_slug = 'event-espresso-free'; //this needs to be the slug of the plugin/addon that you want updated (and that pue-client.php is included with).  This slug should match what you've set as the value for plugin-slug when adding the plugin to the plugin list via plugin-update-engine on your server.
-			//$options needs to be an array with the included keys as listed.
+			$plugin_slug = array(
+				'free' => array('L' => 'event-espresso-free'),
+				'premium' => array('P' => 'event-espresso'),
+				'prerelease' => array('B' => 'event-espresso-pr'),
+				); 
 			$options = array(
 			//	'optionName' => '', //(optional) - used as the reference for saving update information in the clients options table.  Will be automatically set if left blank.
 				'apikey' => $api_key, //(required), you will need to obtain the apikey that the client gets from your site and then saves in their sites options table (see 'getting an api-key' below)
@@ -1757,6 +1815,8 @@ function ee_core_load_pue_update() {
 				'checkPeriod' => '12', //(optional) - use this parameter to indicate how often you want the client's install to ping your server for update checks.  The integer indicates hours.  If you don't include this parameter it will default to 12 hours.
 				'option_key' => 'site_license_key', //this is what is used to reference the api_key in your plugin options.  PUE uses this to trigger updating your information message whenever this option_key is modified.
 				'options_page_slug' => 'event_espresso',
+				'plugin_basename' => EVENT_ESPRESSO_WPPLUGINPATH,
+				'use_wp_update' => TRUE, //if TRUE then you want FREE versions of the plugin to be updated from WP
 				'extra_stats' => $extra_stats
 			);
 			$check_for_updates = new PluginUpdateEngineChecker($host_server_url, $plugin_slug, $options); //initiate the class and start the plugin update engine!

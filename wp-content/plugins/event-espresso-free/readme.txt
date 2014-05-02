@@ -8,9 +8,9 @@ Tags: event registration, events planner, events calendar, wordpress events, eve
 
 Requires at least: 3.5
 
-Tested up to: 3.6
+Tested up to: 3.8.1
 
-Stable tag: 3.1.35.L
+Stable tag: 3.1.36.4.L
 
 Manage your events from your WordPress dashboard. Reduce your admin, reduce your costs, make your life easier!
 
@@ -73,6 +73,7 @@ Check out the advanced [installation](http://eventespresso.com/wiki/installing-e
 == Screenshots ==
 
 [View Sample Screens Here](http://eventespresso.com/event-espresso-lite-preview/?utm_source=wordpress_org&utm_medium=link&utm_content=View+Sample+Screens+Here&utm_campaign=plugin_screenshots_tab) OR [Compare Features](http://eventespresso.com/rich-features/compare-support-license-features/?utm_source=wordpress_org&utm_medium=link&utm_content=Compare+Features&utm_campaign=plugin_screenshots_tab)
+
 
 **[Buy a Premium Support License](http://eventespresso.com/pricing/?utm_source=wordpress_org&utm_medium=link&utm_content=Buy+a+Premium+Support+License&utm_campaign=plugin_dscreenshots_tab) to get access to more features (including [recurring events](http://eventespresso.com/product/espresso-multiple/?utm_source=wordpress_org&utm_medium=link&utm_campaign=plugin_screenshots_tab&utm_content=Multiple+Event+Registration), [Social Coupon Integration](http://eventespresso.com/product/espresso-groupon/?utm_source=wordpress_org&utm_medium=link&utm_campaign=plugin_screenshots_tab&utm_content=Social+Coupon+Integration), [WP User Integration](http://eventespresso.com/product/espresso-members/?utm_source=wordpress_org&utm_medium=link&utm_campaign=plugin_screenshots_tab&utm_content=WP+User+Integration), [Custom Files Add-on](http://eventespresso.com/product/espresso-custom-files/?utm_source=wordpress_org&utm_medium=link&utm_campaign=plugin_screenshots_tab&utm_content=Custom+Files+Add-on), etc.) and additional payment options for your WordPress events.**
 

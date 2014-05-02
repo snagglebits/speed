@@ -284,7 +284,7 @@ $org_options['display_featured_image'] = !empty($_POST['display_featured_image']
 					</div>
 					<!-- / .postbox --> 
 				</div>
-		<?php }?>
+				<?php }?>
 				<!-- / .metabox-holder -->
 				<?php #### finish metaboxes #### ?>
 				

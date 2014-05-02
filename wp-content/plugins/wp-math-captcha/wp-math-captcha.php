@@ -2,7 +2,7 @@
 /*
 Plugin Name: Math Captcha
 Description: Math Captcha is a <strong>100% effective CAPTCHA for WordPress</strong> that integrates into login, registration, comments, Contact Form 7 and bbPress.
-Version: 1.1.0
+Version: 1.1.1
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/math-captcha/
@@ -54,7 +54,7 @@ class Math_Captcha
 			'deactivation_delete' => FALSE,
 			'flush_rules' => FALSE
 		),
-		'version' => '1.1.0'
+		'version' => '1.1.1'
 	);
 	private $session_ids = array();
 	private $session_number = 0;
@@ -1008,7 +1008,7 @@ EOT;
 		}
 
 		echo '
-			<p class="description">'.__('Select were would you like to use Math Captcha.', 'math-captcha').'</p>
+			<p class="description">'.__('Select where you\'d like to use Math Captcha.', 'math-captcha').'</p>
 		</div>';
 	}
 
@@ -1250,7 +1250,22 @@ EOT;
 		echo '
 		<div class="wrap">'.screen_icon().'
 			<h2>'.__('Math Captcha', 'math-captcha').'</h2>
-			<div class="metabox-holder postbox-container math-captcha-settings">
+			<div class="math-captcha-settings">
+				<div class="df-credits">
+					<h3 class="hndl">'.__('Math Captcha', 'math-captcha').'</h3>
+					<div class="inside">
+						<h4 class="inner">'.__('Need support?', 'math-captcha').'</h4>
+						<p class="inner">'.__('If you are having problems with this plugin, please talk about them in the', 'math-captcha').' <a href="http://dfactory.eu/support/" target="_blank" title="'.__('Support forum','math-captcha').'">'.__('Support forum', 'math-captcha').'</a></p>
+						<hr />
+						<h4 class="inner">'.__('Do you like this plugin?', 'math-captcha').'</h4>
+						<p class="inner"><a href="http://wordpress.org/support/view/plugin-reviews/wp-math-captcha" target="_blank" title="'.__('Rate it 5', 'math-captcha').'">'.__('Rate it 5', 'math-captcha').'</a> '.__('on WordPress.org', 'math-captcha').'<br />'.
+						__('Blog about it & link to the', 'math-captcha').' <a href="http://dfactory.eu/plugins/math-captcha/" target="_blank" title="'.__('plugin page', 'math-captcha').'">'.__('plugin page', 'math-captcha').'</a><br />'.
+						__('Check out our other', 'math-captcha').' <a href="http://dfactory.eu/plugins/" target="_blank" title="'.__('WordPress plugins', 'math-captcha').'">'.__('WordPress plugins', 'math-captcha').'</a>
+						</p>            
+						<hr />
+						<p class="df-link inner">Created by <a href="http://www.dfactory.eu" target="_blank" title="dFactory - Quality plugins for WordPress"><img src="'.plugins_url('/images/logo-dfactory.png' , __FILE__ ).'" title="dFactory - Quality plugins for WordPress" alt="dFactory - Quality plugins for WordPress" /></a></p>
+					</div>
+				</div>
 				<form action="options.php" method="post">';
 
 		wp_nonce_field('update-options');
@@ -1260,21 +1275,6 @@ EOT;
 
 		echo '
 				</form>
-			</div>
-			<div class="df-credits postbox-container">
-				<h3 class="metabox-title">'.__('Math Captcha', 'math-captcha').'</h3>
-				<div class="inner">
-					<h3>'.__('Need support?', 'math-captcha').'</h3>
-					<p>'.__('If you are having problems with this plugin, please talk about them in the', 'math-captcha').' <a href="http://dfactory.eu/support/" target="_blank" title="'.__('Support forum','math-captcha').'">'.__('Support forum', 'math-captcha').'</a></p>
-					<hr />
-					<h3>'.__('Do you like this plugin?', 'math-captcha').'</h3>
-					<p><a href="http://wordpress.org/support/view/plugin-reviews/wp-math-captcha" target="_blank" title="'.__('Rate it 5', 'math-captcha').'">'.__('Rate it 5', 'math-captcha').'</a> '.__('on WordPress.org', 'math-captcha').'<br />'.
-					__('Blog about it & link to the', 'math-captcha').' <a href="http://dfactory.eu/plugins/math-captcha/" target="_blank" title="'.__('plugin page', 'math-captcha').'">'.__('plugin page', 'math-captcha').'</a><br />'.
-					__('Check out our other', 'math-captcha').' <a href="http://dfactory.eu/plugins/" target="_blank" title="'.__('WordPress plugins', 'math-captcha').'">'.__('WordPress plugins', 'math-captcha').'</a>
-					</p>            
-					<hr />
-					<p class="df-link">Created by <a href="http://www.dfactory.eu" target="_blank" title="dFactory - Quality plugins for WordPress"><img src="'.plugins_url('/images/logo-dfactory.png' , __FILE__ ).'" title="dFactory - Quality plugins for WordPress" alt="dFactory - Quality plugins for WordPress" /></a></p>
-				</div>
 			</div>
 			<div class="clear"></div>
 		</div>';

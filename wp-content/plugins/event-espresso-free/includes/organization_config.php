@@ -50,6 +50,8 @@ function organization_config_mnu() {
 		$org_options['affiliate_id'] = isset($_POST['affiliate_id']) && !empty($_POST['affiliate_id']) ? $_POST['affiliate_id'] : '';
 		$org_options['site_license_key'] = isset($_POST['site_license_key']) && !empty($_POST['site_license_key']) ? trim($_POST['site_license_key']) : '';
 		$org_options['default_payment_status'] = isset($_POST['default_payment_status']) && !empty($_POST['default_payment_status']) ? $_POST['default_payment_status'] : '';
+		$org_options['default_promocode_usage'] = isset($_POST['default_promocode_usage']) && !empty($_POST['default_promocode_usage']) ? $_POST['default_promocode_usage'] : 'N';
+		$org_options['ticket_reservation_time'] = isset($_POST['ticket_reservation_time']) && !empty($_POST['ticket_reservation_time']) ? $_POST['ticket_reservation_time'] : '30';
 		$ueip_optin = isset($_POST['ueip_optin']) && !empty($_POST['ueip_optin']) ? $_POST['ueip_optin'] : 'yes';
 		
 		$org_options['default_logo_url'] = isset($_REQUEST['upload_image']) && !empty($_REQUEST['upload_image']) ? $_REQUEST['upload_image'] : '';
@@ -127,6 +129,9 @@ function organization_config_mnu() {
 
 	$org_options = get_option('events_organization_settings');
 	$ueip_optin = get_option('ee_ueip_optin');
+	$plugin_basename = plugin_basename(EVENT_ESPRESSO_PLUGINPATH);
+	/*$verify_fail = get_option( 'pue_verification_error_' . $plugin_basename );
+	$site_license_key_verified = !empty( $verify_fail ) ? '<span class"pue-sl-not-verified"></span>' : '<span class="pue-sl-verified"></span>';/**/ //to be added for 3.1.37
 	$values = array(
 			array('id' => 'Y', 'text' => __('Yes', 'event_espresso')),
 			array('id' => 'N', 'text' => __('No', 'event_espresso')));
@@ -546,7 +551,7 @@ function organization_config_mnu() {
 									</h3>
 									<div class="inside">
 										<div class="padding">
-											<p><?php echo __('Please purchase a', 'event_espresso') ?> <a href="http://eventespresso.com/pricing/?utm_source=ee_plugin_admin&utm_medium=link&utm_content=purchase+a+support+license<?php echo '+ee_version_'.EVENT_ESPRESSO_VERSION; ?>&utm_campaign=organization_config_tab" target="_blank"><?php echo __('support license', 'event_espresso') ?></a> <?php echo __('to gain access to these features.', 'event_espresso') ?></p>
+											<p><?php echo __('Please purchase a', 'event_espresso') ?> <a href="http://eventespresso.com/download/" target="_blank"><?php echo __('support license', 'event_espresso') ?></a> <?php echo __('to gain access to these features.', 'event_espresso') ?></p>
 											<p>
 													<?php _e('Additional features include:', 'event_espresso'); ?>
 											</p>
@@ -588,7 +593,7 @@ function organization_config_mnu() {
 									</h3>
 									<div class="inside">
 										<div class="padding">
-											<p><?php echo __('Please purchase a', 'event_espresso') ?> <a href="http://eventespresso.com/pricing/?utm_source=ee_plugin_admin&utm_medium=link&utm_content=purchase+a+support+license<?php echo '+ee_version_'.EVENT_ESPRESSO_VERSION; ?>&utm_campaign=organization_config_tab" target="_blank"><?php echo __('support license', 'event_espresso') ?></a> <?php echo __('to gain access to this feature.', 'event_espresso') ?></p>
+											<p><?php echo __('Please purchase a', 'event_espresso') ?> <a href="http://eventespresso.com/download/" target="_blank"><?php echo __('support license', 'event_espresso') ?></a> <?php echo __('to gain access to this feature.', 'event_espresso') ?></p>
 											<p> <?php echo sprintf(__('reCAPTCHA helps prevent automated abuse of your site (such as comment spam or bogus registrations) by using a %s to ensure that only humans perform certain actions.', 'event_espresso'), '<a href="http://recaptcha.net/captcha.html">CAPTCHA</a>'); ?> </p>
 										</div>
 									</div>
@@ -598,7 +603,7 @@ function organization_config_mnu() {
 						<?php
 					}
 
-					if ($espresso_check_for_updates == true) {
+					if ($espresso_check_for_updates == true && $espresso_premium == true) {
 						?>
 
 						<li><a name="license_key" id="license_key"></a>
