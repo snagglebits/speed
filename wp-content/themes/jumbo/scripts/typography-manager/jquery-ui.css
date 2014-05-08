@@ -1,0 +1,38 @@
+.slider_container {
+	display:block;
+	height: 25px;
+	top: 170px;
+	left: 165px;
+}
+.minus {
+	background: url(images/minus-trans.png) no-repeat;
+	height: 9px;
+	width: 25px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+}
+.slider_bar {
+	background: url(images/bar-trans.png) no-repeat;
+	height: 9px;
+	width: 316px;
+	float: left;
+	margin: 0px 5px;
+	position: relative;
+}
+.add {
+	background: url(images/add-trans.png) no-repeat;
+	height: 25px;
+	width: 23px;
+	float: left;
+	position: relative;
+	top: -5px;
+	cursor: pointer;
+}
+.slider_handle {
+	background: url(images/selector-trans.png) no-repeat;
+	height: 25px;
+	width: 12px;
+	position: absolute;
+	top: -8px;
+}
