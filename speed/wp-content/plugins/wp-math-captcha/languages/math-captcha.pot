@@ -1,0 +1,340 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha\n"
+"POT-Creation-Date: 2013-08-28 11:18+0100\n"
+"PO-Revision-Date: 2013-08-28 11:18+0100\n"
+"Last-Translator: Bartosz Arendt <info@digitalfactory.pl>\n"
+"Language-Team: dFactory <info@dfactory.eu>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wp-math-captcha.php:496
+msgid "one"
+msgstr ""
+
+#: ../wp-math-captcha.php:497
+msgid "two"
+msgstr ""
+
+#: ../wp-math-captcha.php:498
+msgid "three"
+msgstr ""
+
+#: ../wp-math-captcha.php:499
+msgid "four"
+msgstr ""
+
+#: ../wp-math-captcha.php:500
+msgid "five"
+msgstr ""
+
+#: ../wp-math-captcha.php:501
+msgid "six"
+msgstr ""
+
+#: ../wp-math-captcha.php:502
+msgid "seven"
+msgstr ""
+
+#: ../wp-math-captcha.php:503
+msgid "eight"
+msgstr ""
+
+#: ../wp-math-captcha.php:504
+msgid "nine"
+msgstr ""
+
+#: ../wp-math-captcha.php:505
+msgid "ten"
+msgstr ""
+
+#: ../wp-math-captcha.php:506
+msgid "eleven"
+msgstr ""
+
+#: ../wp-math-captcha.php:507
+msgid "twelve"
+msgstr ""
+
+#: ../wp-math-captcha.php:508
+msgid "thirteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:509
+msgid "fourteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:510
+msgid "fifteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:511
+msgid "sixteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:512
+msgid "seventeen"
+msgstr ""
+
+#: ../wp-math-captcha.php:513
+msgid "eighteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:514
+msgid "nineteen"
+msgstr ""
+
+#: ../wp-math-captcha.php:515
+msgid "twenty"
+msgstr ""
+
+#: ../wp-math-captcha.php:516
+msgid "thirty"
+msgstr ""
+
+#: ../wp-math-captcha.php:517
+msgid "forty"
+msgstr ""
+
+#: ../wp-math-captcha.php:518
+msgid "fifty"
+msgstr ""
+
+#: ../wp-math-captcha.php:519
+msgid "sixty"
+msgstr ""
+
+#: ../wp-math-captcha.php:520
+msgid "seventy"
+msgstr ""
+
+#: ../wp-math-captcha.php:521
+msgid "eighty"
+msgstr ""
+
+#: ../wp-math-captcha.php:522
+msgid "ninety"
+msgstr ""
+
+#: ../wp-math-captcha.php:814 ../wp-math-captcha.php:815
+#: ../wp-math-captcha.php:816
+msgid "ERROR"
+msgstr ""
+
+#: ../wp-math-captcha.php:814 ../includes/math-captcha-cf7.php:113
+msgid "Please enter captcha value."
+msgstr ""
+
+#: ../wp-math-captcha.php:815 ../includes/math-captcha-cf7.php:109
+msgid "Invalid captcha value."
+msgstr ""
+
+#: ../wp-math-captcha.php:816 ../includes/math-captcha-cf7.php:117
+msgid "Captcha time expired."
+msgstr ""
+
+#: ../wp-math-captcha.php:820
+msgid "login form"
+msgstr ""
+
+#: ../wp-math-captcha.php:821
+msgid "registration form"
+msgstr ""
+
+#: ../wp-math-captcha.php:822
+msgid "reset password form"
+msgstr ""
+
+#: ../wp-math-captcha.php:823
+msgid "comment form"
+msgstr ""
+
+#: ../wp-math-captcha.php:824
+msgid "bbpress"
+msgstr ""
+
+#: ../wp-math-captcha.php:825
+msgid "contact form 7"
+msgstr ""
+
+#: ../wp-math-captcha.php:829
+msgid "yes"
+msgstr ""
+
+#: ../wp-math-captcha.php:830
+msgid "no"
+msgstr ""
+
+#: ../wp-math-captcha.php:834
+msgid "addition (+)"
+msgstr ""
+
+#: ../wp-math-captcha.php:835
+msgid "subtraction (-)"
+msgstr ""
+
+#: ../wp-math-captcha.php:836
+msgid "multiplication (&#215;)"
+msgstr ""
+
+#: ../wp-math-captcha.php:837
+msgid "division (&#247;)"
+msgstr ""
+
+#: ../wp-math-captcha.php:841
+msgid "numbers"
+msgstr ""
+
+#: ../wp-math-captcha.php:842
+msgid "words"
+msgstr ""
+
+#: ../wp-math-captcha.php:854
+msgid "Math Captcha settings"
+msgstr ""
+
+#: ../wp-math-captcha.php:855
+msgid "Enable Math Captcha for"
+msgstr ""
+
+#: ../wp-math-captcha.php:856
+msgid "Hide for logged in users"
+msgstr ""
+
+#: ../wp-math-captcha.php:857
+msgid "Mathematical operations"
+msgstr ""
+
+#: ../wp-math-captcha.php:858
+msgid "Display captcha as"
+msgstr ""
+
+#: ../wp-math-captcha.php:859
+msgid "Captcha field title"
+msgstr ""
+
+#: ../wp-math-captcha.php:860
+msgid "Captcha time"
+msgstr ""
+
+#: ../wp-math-captcha.php:861
+msgid "Deactivation"
+msgstr ""
+
+#: ../wp-math-captcha.php:881
+msgid "Select were would you like to use Math Captcha."
+msgstr ""
+
+#: ../wp-math-captcha.php:902
+msgid "Would you like to hide captcha for logged in users?"
+msgstr ""
+
+#: ../wp-math-captcha.php:915
+msgid "How to entitle field with captcha?"
+msgstr ""
+
+#: ../wp-math-captcha.php:928
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr ""
+
+#: ../wp-math-captcha.php:949
+msgid "Delete settings on plugin deactivation"
+msgstr ""
+
+#: ../wp-math-captcha.php:970
+msgid "Select which mathematical operations to use in your captcha."
+msgstr ""
+
+#: ../wp-math-captcha.php:991
+msgid "Select how you'd like to display you captcha."
+msgstr ""
+
+#: ../wp-math-captcha.php:1032
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr ""
+
+#: ../wp-math-captcha.php:1048
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr ""
+
+#: ../wp-math-captcha.php:1082 ../wp-math-captcha.php:1083
+#: ../wp-math-captcha.php:1098 ../wp-math-captcha.php:1111
+#: ../includes/math-captcha-cf7.php:148
+msgid "Math Captcha"
+msgstr ""
+
+#: ../wp-math-captcha.php:1113
+msgid "Need support?"
+msgstr ""
+
+#: ../wp-math-captcha.php:1114
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr ""
+
+#: ../wp-math-captcha.php:1114
+msgid "Support forum"
+msgstr ""
+
+#: ../wp-math-captcha.php:1116
+msgid "Do you like this plugin?"
+msgstr ""
+
+#: ../wp-math-captcha.php:1117
+msgid "Rate it 5"
+msgstr ""
+
+#: ../wp-math-captcha.php:1117
+msgid "on WordPress.org"
+msgstr ""
+
+#: ../wp-math-captcha.php:1118
+msgid "Blog about it & link to the"
+msgstr ""
+
+#: ../wp-math-captcha.php:1118
+msgid "plugin page"
+msgstr ""
+
+#: ../wp-math-captcha.php:1119
+msgid "Check out our other"
+msgstr ""
+
+#: ../wp-math-captcha.php:1119
+msgid "WordPress plugins"
+msgstr ""
+
+#: ../wp-math-captcha.php:1172
+msgid "Support"
+msgstr ""
+
+#: ../wp-math-captcha.php:1194
+msgid "Settings"
+msgstr ""
+
+#: ../includes/math-captcha-cf7.php:160
+msgid "Name"
+msgstr ""
+
+#: ../includes/math-captcha-cf7.php:166
+msgid "Input field settings"
+msgstr ""
+
+#: ../includes/math-captcha-cf7.php:169 ../includes/math-captcha-cf7.php:173
+msgid "optional"
+msgstr ""
+
+#: ../includes/math-captcha-cf7.php:179
+msgid "Copy this code and paste it into the form left."
+msgstr ""

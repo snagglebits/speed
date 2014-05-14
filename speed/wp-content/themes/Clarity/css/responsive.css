@@ -1,0 +1,115 @@
+/* This File Contains The CSS For The Clarity Theme Responsive Layout */
+
+/* Apply To All Responsive Layouts
+================================================== */
+img{ max-width: 100%; }
+
+
+@media only screen and (device-width: 768px) {
+
+}
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for a width of 740px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	#wrap, #footer-wrap, #footer-bottom-wrap{ width: 680px; }
+	.hp-highlight, .hp-highlight-v2, .hp-highlight-v3, .portfolio-item, .portfolio-item-home, .home-entry, { width: 33%;  }
+	#footer-one,#footer-two,#footer-three,#footer-four{ width: 155px;  }
+	#home-tagline{ font-size: 21px; }
+	#search { text-indent: -9999px; }
+	.loop-entry-thumbnail{width: 35%;}
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 420px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	#wrap, #footer-wrap, #footer-bottom-wrap{ width: 420px; }
+	.home-entry { width: 100%; margin-right: 0px; }
+	
+	#logo a{font-size: 650%;}
+
+	h1 {font-size: 200%;}
+	h2 { font-size: 150% }
+	h3 { font-size: 125%;}
+	h4 { font-size: 110%;}
+
+	.responsive-clear{ clear: both; }
+	
+	.portfolio-item-home a img{ width: 80%;}
+	
+	.portfolio-item{ width: 200px; margin-right: 15px; }
+
+	.loop-entry-thumbnail{width: 33%;}
+	
+	ul.filter{ margin-bottom: 0; }
+
+	.alignright { float:none;
+	width: 100%;
+	text-align: center;}
+
+	.alignleft { float:none; 
+	min-width: 100%;
+	text-align: center;
+	padding-bottom: 10px}
+
+}
+
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 290px */
+@media only screen and (max-width: 479px) {
+	
+	#logo { text-align: center; width: 100%; display:block;}
+	
+	#logo a{font-size: 450%;}
+
+	#masterhead { padding: 40px 0px 30px 0px; border-bottom: 3px solid #F4F3EF;}
+
+	#wrap, #footer-wrap, #footer-bottom-wrap{ width: 280px; }
+	.home-entry, { width: 250px; margin-right: auto; margin-left: auto; }
+
+	#site-description{
+	display: none;}
+
+	h1 {font-size: 175%;}
+	h2 { font-size: 140% }
+	h3 { font-size: 115%;}
+	h4 { font-size: 100%;}
+
+	.home-entry-description { 
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+
+	.read-more {
+	padding-bottom: 40px;
+	}
+
+	.alignright { float:none;
+	width: 100%;
+	text-align: center;}
+
+	.alignleft { float:none; 
+	min-width: 100%;
+	text-align: center;
+	padding-bottom: 10px}
+	
+	.loop-entry-meta{ display: none; }
+	.loop-entry h2{ margin-bottom: 10px; }
+		
+	#page-heading{ text-align: center; }
+	
+	#footer-menu, #copyright, #back-to-top{ width: 100%; text-align: center; }
+
+

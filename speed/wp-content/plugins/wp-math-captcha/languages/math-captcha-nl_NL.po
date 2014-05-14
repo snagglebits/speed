@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha v1.0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-09-20 05:04:24+0000\n"
+"Last-Translator: redactie <redactie@datisslimbedacht.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: includes/math-captcha-cf7.php:109
+#: wp-math-captcha.php:811
+#@ math-captcha
+msgid "Invalid captcha value."
+msgstr "Ongeldige captcha waarde"
+
+#: includes/math-captcha-cf7.php:113
+#: wp-math-captcha.php:810
+#@ math-captcha
+msgid "Please enter captcha value."
+msgstr "Voer aub een captcha waarde in"
+
+#: includes/math-captcha-cf7.php:117
+#: wp-math-captcha.php:812
+#@ math-captcha
+msgid "Captcha time expired."
+msgstr "Captcha duur tot time-out."
+
+#: includes/math-captcha-cf7.php:148
+#: wp-math-captcha.php:1078
+#: wp-math-captcha.php:1079
+#: wp-math-captcha.php:1094
+#: wp-math-captcha.php:1107
+#@ math-captcha
+msgid "Math Captcha"
+msgstr "Match Captcha"
+
+#: includes/math-captcha-cf7.php:160
+#@ math-captcha
+msgid "Name"
+msgstr "Naam"
+
+#: includes/math-captcha-cf7.php:166
+#@ math-captcha
+msgid "Input field settings"
+msgstr "Instellingen invoervelden"
+
+#: includes/math-captcha-cf7.php:169
+#: includes/math-captcha-cf7.php:173
+#@ math-captcha
+msgid "optional"
+msgstr "optioneel"
+
+#: includes/math-captcha-cf7.php:179
+#@ math-captcha
+msgid "Copy this code and paste it into the form left."
+msgstr "Kopieer deze code en plak het in het formulier."
+
+#: wp-math-captcha.php:496
+#@ math-captcha
+msgid "one"
+msgstr "een"
+
+#: wp-math-captcha.php:497
+#@ math-captcha
+msgid "two"
+msgstr "twee"
+
+#: wp-math-captcha.php:498
+#@ math-captcha
+msgid "three"
+msgstr "drie"
+
+#: wp-math-captcha.php:499
+#@ math-captcha
+msgid "four"
+msgstr "vier"
+
+#: wp-math-captcha.php:500
+#@ math-captcha
+msgid "five"
+msgstr "vijf"
+
+#: wp-math-captcha.php:501
+#@ math-captcha
+msgid "six"
+msgstr "zes"
+
+#: wp-math-captcha.php:502
+#@ math-captcha
+msgid "seven"
+msgstr "zeven"
+
+#: wp-math-captcha.php:503
+#@ math-captcha
+msgid "eight"
+msgstr "acht"
+
+#: wp-math-captcha.php:504
+#@ math-captcha
+msgid "nine"
+msgstr "negen"
+
+#: wp-math-captcha.php:505
+#@ math-captcha
+msgid "ten"
+msgstr "tien"
+
+#: wp-math-captcha.php:506
+#@ math-captcha
+msgid "eleven"
+msgstr "elf"
+
+#: wp-math-captcha.php:507
+#@ math-captcha
+msgid "twelve"
+msgstr "twaalf"
+
+#: wp-math-captcha.php:508
+#@ math-captcha
+msgid "thirteen"
+msgstr "dertien"
+
+#: wp-math-captcha.php:509
+#@ math-captcha
+msgid "fourteen"
+msgstr "veertien"
+
+#: wp-math-captcha.php:510
+#@ math-captcha
+msgid "fifteen"
+msgstr "vijftien"
+
+#: wp-math-captcha.php:511
+#@ math-captcha
+msgid "sixteen"
+msgstr "zestien"
+
+#: wp-math-captcha.php:512
+#@ math-captcha
+msgid "seventeen"
+msgstr "zeventien"
+
+#: wp-math-captcha.php:513
+#@ math-captcha
+msgid "eighteen"
+msgstr "achttien"
+
+#: wp-math-captcha.php:514
+#@ math-captcha
+msgid "nineteen"
+msgstr "negentien"
+
+#: wp-math-captcha.php:515
+#@ math-captcha
+msgid "twenty"
+msgstr "twintig"
+
+#: wp-math-captcha.php:516
+#@ math-captcha
+msgid "thirty"
+msgstr "dertig"
+
+#: wp-math-captcha.php:517
+#@ math-captcha
+msgid "forty"
+msgstr "veertig"
+
+#: wp-math-captcha.php:518
+#@ math-captcha
+msgid "fifty"
+msgstr "vijftig"
+
+#: wp-math-captcha.php:519
+#@ math-captcha
+msgid "sixty"
+msgstr "zestig"
+
+#: wp-math-captcha.php:520
+#@ math-captcha
+msgid "seventy"
+msgstr "zeventig"
+
+#: wp-math-captcha.php:521
+#@ math-captcha
+msgid "eighty"
+msgstr "tachtig"
+
+#: wp-math-captcha.php:522
+#@ math-captcha
+msgid "ninety"
+msgstr "negentig"
+
+#: wp-math-captcha.php:810
+#: wp-math-captcha.php:811
+#: wp-math-captcha.php:812
+#@ math-captcha
+msgid "ERROR"
+msgstr "FOUT"
+
+#: wp-math-captcha.php:816
+#@ math-captcha
+msgid "login form"
+msgstr "login formulier"
+
+#: wp-math-captcha.php:817
+#@ math-captcha
+msgid "registration form"
+msgstr "registratie formulier"
+
+#: wp-math-captcha.php:818
+#@ math-captcha
+msgid "reset password form"
+msgstr "herstel wachtwoord formulier"
+
+#: wp-math-captcha.php:819
+#@ math-captcha
+msgid "comment form"
+msgstr "reactie formulier"
+
+#: wp-math-captcha.php:820
+#@ math-captcha
+msgid "bbpress"
+msgstr "bbpress"
+
+#: wp-math-captcha.php:821
+#@ math-captcha
+msgid "contact form 7"
+msgstr "contact formulier 7"
+
+#: wp-math-captcha.php:825
+#@ math-captcha
+msgid "yes"
+msgstr "ja"
+
+#: wp-math-captcha.php:826
+#@ math-captcha
+msgid "no"
+msgstr "nee"
+
+#: wp-math-captcha.php:830
+#@ math-captcha
+msgid "addition (+)"
+msgstr "optellen (+)"
+
+#: wp-math-captcha.php:831
+#@ math-captcha
+msgid "subtraction (-)"
+msgstr "aftrekken (-)"
+
+#: wp-math-captcha.php:832
+#@ math-captcha
+msgid "multiplication (&#215;)"
+msgstr "vermenigvuldigen (&#215;)"
+
+#: wp-math-captcha.php:833
+#@ math-captcha
+msgid "division (&#247;)"
+msgstr "deel door (&#247;)"
+
+#: wp-math-captcha.php:837
+#@ math-captcha
+msgid "numbers"
+msgstr "cijfers"
+
+#: wp-math-captcha.php:838
+#@ math-captcha
+msgid "words"
+msgstr "woorden"
+
+#: wp-math-captcha.php:850
+#@ math-captcha
+msgid "Math Captcha settings"
+msgstr "Match Captcha instellingen"
+
+#: wp-math-captcha.php:851
+#@ math-captcha
+msgid "Enable Math Captcha for"
+msgstr "Zet Match Captcha voor"
+
+#: wp-math-captcha.php:852
+#@ math-captcha
+msgid "Hide for logged in users"
+msgstr "Verberg voor gebruikers die ingelogd zijn"
+
+#: wp-math-captcha.php:853
+#@ math-captcha
+msgid "Mathematical operations"
+msgstr "Soort sommen"
+
+#: wp-math-captcha.php:854
+#@ math-captcha
+msgid "Display captcha as"
+msgstr "Toon captcha als"
+
+#: wp-math-captcha.php:855
+#@ math-captcha
+msgid "Captcha field title"
+msgstr "Captcha titel"
+
+#: wp-math-captcha.php:856
+#@ math-captcha
+msgid "Captcha time"
+msgstr "Captcha tijd"
+
+#: wp-math-captcha.php:857
+#@ math-captcha
+msgid "Deactivation"
+msgstr "Deactivatie"
+
+#: wp-math-captcha.php:877
+#@ math-captcha
+msgid "Select were would you like to use Math Captcha."
+msgstr "Selecteer waar je Match Captcha wilt gebruiken"
+
+#: wp-math-captcha.php:898
+#@ math-captcha
+msgid "Would you like to hide captcha for logged in users?"
+msgstr "Wil je captcha verbergen voor ingelogde gebruikers?"
+
+#: wp-math-captcha.php:911
+#@ math-captcha
+msgid "How to entitle field with captcha?"
+msgstr "Wat moet er bij de captcha getoond worden als titel?"
+
+#: wp-math-captcha.php:924
+#@ math-captcha
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr "Voer de tijd in (in seconden) die een gebruiker heeft om de captcha waarde in te geven."
+
+#: wp-math-captcha.php:945
+#@ math-captcha
+msgid "Delete settings on plugin deactivation"
+msgstr "Verwijder instellingen bij deactivatie plugin"
+
+#: wp-math-captcha.php:966
+#@ math-captcha
+msgid "Select which mathematical operations to use in your captcha."
+msgstr "Selecteer welke soort sommen er gebruikt moeten worden."
+
+#: wp-math-captcha.php:987
+#@ math-captcha
+msgid "Select how you'd like to display you captcha."
+msgstr "Selecteer hoe je de captcha wilt weergeven."
+
+#: wp-math-captcha.php:1028
+#@ math-captcha
+msgid "You need to check at least one mathematical operation. Defaults settings of this option restored."
+msgstr "U dient tenminste 1 soort som te selecteren. Standaard waarde hersteld."
+
+#: wp-math-captcha.php:1044
+#@ math-captcha
+msgid "You need to check at least one group. Defaults settings of this option restored."
+msgstr "U dient tenminste 1 groep te selecteren. Standaard waarde hersteld."
+
+#: wp-math-captcha.php:1109
+#@ math-captcha
+msgid "Need support?"
+msgstr "Hulp nodig?"
+
+#: wp-math-captcha.php:1110
+#@ math-captcha
+msgid "If you are having problems with this plugin, please talk about them in the"
+msgstr "Indien u problemen heeft met deze plugin, geef dit dan aan in het"
+
+#: wp-math-captcha.php:1110
+#@ math-captcha
+msgid "Support forum"
+msgstr "Support forum"
+
+#: wp-math-captcha.php:1112
+#@ math-captcha
+msgid "Do you like this plugin?"
+msgstr "Vind u deze plugin leuk?"
+
+#: wp-math-captcha.php:1113
+#@ math-captcha
+msgid "Rate it 5"
+msgstr "Waardeer het met 5"
+
+#: wp-math-captcha.php:1113
+#@ math-captcha
+msgid "on WordPress.org"
+msgstr "op Wordpress..org"
+
+#: wp-math-captcha.php:1114
+#@ math-captcha
+msgid "Blog about it & link to the"
+msgstr "Blog en link naar het"
+
+#: wp-math-captcha.php:1114
+#@ math-captcha
+msgid "plugin page"
+msgstr "plugin pagina"
+
+#: wp-math-captcha.php:1115
+#@ math-captcha
+msgid "Check out our other"
+msgstr "Kijk naar onze andere"
+
+#: wp-math-captcha.php:1115
+#@ math-captcha
+msgid "WordPress plugins"
+msgstr "Wordpress plugins"
+
+#: wp-math-captcha.php:1168
+#@ math-captcha
+msgid "Support"
+msgstr "Support"
+
+#: wp-math-captcha.php:1190
+#@ math-captcha
+msgid "Settings"
+msgstr "Instellingen"
+

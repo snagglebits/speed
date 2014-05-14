@@ -1,0 +1,356 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha\n"
+"POT-Creation-Date: 2014-01-22 15:55+0400\n"
+"PO-Revision-Date: 2014-01-22 17:32+0400\n"
+"Last-Translator: Valery Ryaboshapko <valera@creator.su>\n"
+"Language-Team: \n"
+"Language: ru-RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../wp-math-captcha.php:645
+msgid "one"
+msgstr "один"
+
+#: ../wp-math-captcha.php:646
+msgid "two"
+msgstr "два"
+
+#: ../wp-math-captcha.php:647
+msgid "three"
+msgstr "три"
+
+#: ../wp-math-captcha.php:648
+msgid "four"
+msgstr "четыре"
+
+#: ../wp-math-captcha.php:649
+msgid "five"
+msgstr "пять"
+
+#: ../wp-math-captcha.php:650
+msgid "six"
+msgstr "шесть"
+
+#: ../wp-math-captcha.php:651
+msgid "seven"
+msgstr "семь"
+
+#: ../wp-math-captcha.php:652
+msgid "eight"
+msgstr "восемь"
+
+#: ../wp-math-captcha.php:653
+msgid "nine"
+msgstr "девять"
+
+#: ../wp-math-captcha.php:654
+msgid "ten"
+msgstr "десять"
+
+#: ../wp-math-captcha.php:655
+msgid "eleven"
+msgstr "одиннадцать"
+
+#: ../wp-math-captcha.php:656
+msgid "twelve"
+msgstr "двенадцать"
+
+#: ../wp-math-captcha.php:657
+msgid "thirteen"
+msgstr "тринадцать"
+
+#: ../wp-math-captcha.php:658
+msgid "fourteen"
+msgstr "четырнадцать"
+
+#: ../wp-math-captcha.php:659
+msgid "fifteen"
+msgstr "пятнадцать"
+
+#: ../wp-math-captcha.php:660
+msgid "sixteen"
+msgstr "шестнадцать"
+
+#: ../wp-math-captcha.php:661
+msgid "seventeen"
+msgstr "семнадцать"
+
+#: ../wp-math-captcha.php:662
+msgid "eighteen"
+msgstr "восемнадцать"
+
+#: ../wp-math-captcha.php:663
+msgid "nineteen"
+msgstr "девятнадцать"
+
+#: ../wp-math-captcha.php:664
+msgid "twenty"
+msgstr "двадцать"
+
+#: ../wp-math-captcha.php:665
+msgid "thirty"
+msgstr "тридцать"
+
+#: ../wp-math-captcha.php:666
+msgid "forty"
+msgstr "сорок"
+
+#: ../wp-math-captcha.php:667
+msgid "fifty"
+msgstr "пятьдесят"
+
+#: ../wp-math-captcha.php:668
+msgid "sixty"
+msgstr "шестьдесят"
+
+#: ../wp-math-captcha.php:669
+msgid "seventy"
+msgstr "семьдесят"
+
+#: ../wp-math-captcha.php:670
+msgid "eighty"
+msgstr "восемьдесят"
+
+#: ../wp-math-captcha.php:671
+msgid "ninety"
+msgstr "девяносто"
+
+#: ../wp-math-captcha.php:943 ../wp-math-captcha.php:944
+#: ../wp-math-captcha.php:945
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: ../wp-math-captcha.php:943 ../includes/math-captcha-cf7.php:109
+msgid "Please enter captcha value."
+msgstr "Пожалуйста, введите капчу."
+
+#: ../wp-math-captcha.php:944 ../includes/math-captcha-cf7.php:105
+msgid "Invalid captcha value."
+msgstr "Неверно введена капча"
+
+#: ../wp-math-captcha.php:945 ../includes/math-captcha-cf7.php:113
+msgid "Captcha time expired."
+msgstr "Срок годности капчи истёк"
+
+#: ../wp-math-captcha.php:949
+msgid "login form"
+msgstr "входа"
+
+#: ../wp-math-captcha.php:950
+msgid "registration form"
+msgstr "регистрации"
+
+#: ../wp-math-captcha.php:951
+msgid "reset password form"
+msgstr "восстановления пароля"
+
+#: ../wp-math-captcha.php:952
+msgid "comment form"
+msgstr "комментариев"
+
+#: ../wp-math-captcha.php:953
+msgid "bbpress"
+msgstr "bbpress"
+
+#: ../wp-math-captcha.php:954
+msgid "contact form 7"
+msgstr "contact form 7"
+
+#: ../wp-math-captcha.php:958
+msgid "yes"
+msgstr "да"
+
+#: ../wp-math-captcha.php:959
+msgid "no"
+msgstr "нет"
+
+#: ../wp-math-captcha.php:963
+msgid "addition (+)"
+msgstr "сложение (+)"
+
+#: ../wp-math-captcha.php:964
+msgid "subtraction (-)"
+msgstr "вычитание (&minus;)"
+
+#: ../wp-math-captcha.php:965
+msgid "multiplication (&#215;)"
+msgstr "умножение (&#215;)"
+
+#: ../wp-math-captcha.php:966
+msgid "division (&#247;)"
+msgstr "деление (&#247;)"
+
+#: ../wp-math-captcha.php:970
+msgid "numbers"
+msgstr "цифры"
+
+#: ../wp-math-captcha.php:971
+msgid "words"
+msgstr "слова"
+
+#: ../wp-math-captcha.php:983
+msgid "Math Captcha settings"
+msgstr "Параметры Math Captcha"
+
+#: ../wp-math-captcha.php:984
+msgid "Enable Math Captcha for"
+msgstr "Использовать Math Captcha для"
+
+#: ../wp-math-captcha.php:985
+msgid "Hide for logged in users"
+msgstr "Скрыть для зарегистрированных пользователей"
+
+#: ../wp-math-captcha.php:986
+msgid "Mathematical operations"
+msgstr "Математические операции"
+
+#: ../wp-math-captcha.php:987
+msgid "Display captcha as"
+msgstr "Показывать капчу как"
+
+#: ../wp-math-captcha.php:988
+msgid "Captcha field title"
+msgstr "Заголовок поля с капчей"
+
+#: ../wp-math-captcha.php:989
+msgid "Captcha time"
+msgstr "Срок годности капчи"
+
+#: ../wp-math-captcha.php:990
+msgid "Block Direct Comments"
+msgstr "Блокировать прямые комментарии"
+
+#: ../wp-math-captcha.php:991
+msgid "Deactivation"
+msgstr "Деактивация"
+
+#: ../wp-math-captcha.php:1011
+msgid "Select were would you like to use Math Captcha."
+msgstr "Выберите, где бы вы хотели видеть капчу."
+
+#: ../wp-math-captcha.php:1032
+msgid "Would you like to hide captcha for logged in users?"
+msgstr "Хотите, чтобы капча скрывалась от зарегистрированных пользователей?"
+
+#: ../wp-math-captcha.php:1045
+msgid "How to entitle field with captcha?"
+msgstr "Как озаглавить поле с капчей?"
+
+#: ../wp-math-captcha.php:1058
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr ""
+"Введите время (в секундах), в течение которого пользователь должен ввести "
+"капчу."
+
+#: ../wp-math-captcha.php:1079
+msgid ""
+"Blocks direct access to wp-comments-post.php. Enable this to prevent "
+"spambots from posting to Wordpress via a URL."
+msgstr ""
+"Заблокировать прямой доступ к wp-comments-post.php. Включите, чтобы спам-"
+"боты не могли добавлять комментарии напрямую через URL."
+
+#: ../wp-math-captcha.php:1100
+msgid "Delete settings on plugin deactivation"
+msgstr "Удалять настройки при деактивации плагина"
+
+#: ../wp-math-captcha.php:1121
+msgid "Select which mathematical operations to use in your captcha."
+msgstr "Выберите, какие математические операции использовать в капче."
+
+#: ../wp-math-captcha.php:1142
+msgid "Select how you'd like to display you captcha."
+msgstr "Выберите, как бы вы хотели отображать капчу."
+
+#: ../wp-math-captcha.php:1183
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr ""
+"Хотя бы две математические операции должны быть отмечены. Восстановлены "
+"параметры по умолчанию."
+
+#: ../wp-math-captcha.php:1199
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr ""
+"Хотя бы один способ отражения капчи должен быть выбран. Восстановлены "
+"настройки по умолчанию."
+
+#: ../wp-math-captcha.php:1236 ../wp-math-captcha.php:1237
+#: ../wp-math-captcha.php:1252 ../wp-math-captcha.php:1265
+#: ../includes/math-captcha-cf7.php:144
+msgid "Math Captcha"
+msgstr "Math Captcha"
+
+#: ../wp-math-captcha.php:1267
+msgid "Need support?"
+msgstr "Нужна помощь?"
+
+#: ../wp-math-captcha.php:1268
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr ""
+"Если у вас возникли проблемы с этим плагином, пожалуйста, сообщите о них на"
+
+#: ../wp-math-captcha.php:1268
+msgid "Support forum"
+msgstr "Форум поддержки"
+
+#: ../wp-math-captcha.php:1270
+msgid "Do you like this plugin?"
+msgstr "Понравился этот плагин?"
+
+#: ../wp-math-captcha.php:1271
+msgid "Rate it 5"
+msgstr "Поставьте ему «пять»"
+
+#: ../wp-math-captcha.php:1271
+msgid "on WordPress.org"
+msgstr "на WordPress.org"
+
+#: ../wp-math-captcha.php:1272
+msgid "Blog about it & link to the"
+msgstr "Блог и"
+
+#: ../wp-math-captcha.php:1272
+msgid "plugin page"
+msgstr "страница плагина"
+
+#: ../wp-math-captcha.php:1273
+msgid "Check out our other"
+msgstr "Взглянуть на другие наши"
+
+#: ../wp-math-captcha.php:1273
+msgid "WordPress plugins"
+msgstr "плагины WordPress"
+
+#: ../wp-math-captcha.php:1335
+msgid "Support"
+msgstr "Поддержка"
+
+#: ../wp-math-captcha.php:1357
+msgid "Settings"
+msgstr "Параметры"
+
+#: ../includes/math-captcha-cf7.php:156
+msgid "Name"
+msgstr "Имя"
+
+#: ../includes/math-captcha-cf7.php:162
+msgid "Input field settings"
+msgstr "Введите поле параметров"
+
+#: ../includes/math-captcha-cf7.php:165 ../includes/math-captcha-cf7.php:169
+msgid "optional"
+msgstr "не обязательно"
+
+#: ../includes/math-captcha-cf7.php:175
+msgid "Copy this code and paste it into the form left."
+msgstr "Скопируйте этот код и вставьте в форму слева."
