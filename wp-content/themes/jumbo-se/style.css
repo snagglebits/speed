@@ -1,0 +1,158 @@
+/*
+ Theme Name:     NewPeterLevine 
+ Theme URI:      localhost:8888/se-den
+ Description:    Twenty Fourteen Child Theme for se.com 
+ Author:         Justin Snavely 
+ Author URI:     http://snagglebits.com
+ Template:       twentyfourteen
+ Version:        0.0.2
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+/* This is for the primary colors here*/
+.header-main, #secondary, .site:before, .site-footer {
+background-color: #046E0D;
+}
+.site {
+margin: 0px auto;
+}
+
+.site-navigation .current_page_item > a, .site-navigation .current_page_ancestor > a, .site-navigation .current-menu-item > a, .site-navigation .current-menu-ancestor > a {
+color: #FCC106;
+font-weight: 900;
+} 
+body {
+/* Background settings are set in Customize.php. */
+background: #FFB119;
+}
+#secondary {
+		width: 162px;
+	}
+.site:before {
+		width: 0px;
+	}
+<!-- Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/ -->
+<!-- CSS -->
+
+<style type="text/css">
+#login-register-password: {
+    width:300px;
+}
+/* tabbed list */
+ul.tabs_login {
+	padding: 0; margin: 20px 0 0 0;
+	position: relative;
+	list-style: none;
+	font-size: 14px;
+	z-index: 1000;
+	float: left;
+	}
+ul.tabs_login li {
+	border: 1px solid #E7E9F6;
+	 /*-webkit-border-top-right-radius: 3px;
+ * 	 -khtml-border-radius-topright: 3px;	
+ * 	 	 -moz-border-radius-topright: 3px;
+ * 	 	 	border-top-right-radius: 3px;
+ * 	 	 		 -webkit-border-top-left-radius: 3px;
+ * 	 	 		 	 -khtml-border-radius-topleft: 3px;	
+ * 	 	 		 	 	 -moz-border-radius-topleft: 3px;
+ * 	 	 		 	 	 	border-top-left-radius: 3px;*/
+	line-height: 28px; /* = */ height: 28px;
+	padding: 0; margin: 0 5px 0 0;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	float: left;
+	}
+ul.tabs_login li a {
+	text-decoration: none;
+	padding: 0 3px;
+	display: block;
+	outline: none;
+	}
+html ul.tabs_login li.active_login {
+	border-left: 1px solid #E7E9F6;
+	border-bottom: 1px solid #fff;
+	text-shadow: 1px 1px 1px rgba(0, .25, 0, 0);
+	 -webkit-border-top-right-radius: 3px;
+ * 	 -khtml-border-radius-topright: 3px;	
+ * 	 	 -moz-border-radius-topright: 3px;
+ * 	 	 	border-top-right-radius: 3px;
+ * 	 	 		 -webkit-border-top-left-radius: 3px;
+ * 	 	 		 	 -khtml-border-radius-topleft: 3px;	
+ * 	 	 		 	 	 -moz-border-radius-topleft: 3px;
+ * 	 	 		 	 	 	border-top-left-radius: 3px;
+	background: #fff;
+	color: #333;
+	}
+html body ul.tabs_login li.active_login a { font-weight: bold; }
+.tab_container_login {
+	background: #046E0D;
+	position: relative;
+	margin: 0 0 20px 0;
+	/*border: 1px solid #E7E9F6;*/
+	 -webkit-border-bottom-left-radius: 3px;
+ * 	 -khtml-border-radius-bottomleft: 3px;	
+ * 	 	 -moz-border-radius-bottomleft: 3px;
+ * 	 	 	border-bottom-left-radius: 3px;
+ * 	 	 		 -webkit-border-bottom-right-radius: 3px;
+ * 	 	 		 	 -khtml-border-radius-bottomright: 3px;	
+ * 	 	 		 	 	 -moz-border-radius-bottomright: 3px;
+ * 	 	 		 	 	 	border-bottom-right-radius: 3px;
+ * 	 	 		 	 	 		 -webkit-border-top-right-radius: 3px;
+ * 	 	 		 	 	 		 	 -khtml-border-radius-topright: 3px;	
+ * 	 	 		 	 	 		 	 	 -moz-border-radius-topright: 3px;
+ * 	 	 		 	 	 		 	 	 	border-top-right-radius: 3px;
+	z-index: 999;
+	float: left;
+	width: 100%;
+	top: -1px;
+	}
+.tab_content_login {
+	padding: 7px 15px 15px 15px;
+	padding-top: 3px;
+	}
+	.tab_content_login ul {
+		padding: 0; margin: 0 0 0 15px;
+		}
+		.tab_content_login li { margin: 5px 0; }
+/* global styles */
+#login-register-password {}
+	#login-register-password h3 {
+		border: 0 none;
+		margin: 3px 0;
+		padding: 0;
+		}
+	#login-register-password p {
+		margin: 0 0 15px 0;
+		padding: 0;
+		}
+/* form elements */
+.wp-user-form {}
+	.username, .password, .login_fields {
+		margin: 7px 0 0 0;
+		overflow: hidden;
+		width: 100%;
+		}
+		.username label, .password label { float: left; clear: none; width: 25%; }
+		.username input, .password input { 
+			font: 12px/1.5 "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+			float: left; clear: none; width: 200px; padding: 2px 3px; color: #777;
+			}
+.rememberme { overflow: hidden; width: 100%; margin-bottom: 7px; }
+#rememberme { float: left; clear: none; margin: 4px 4px -4px 0; }
+.user-submit { padding: 5px 3px; margin: 5px 0; }
+.userinfo { float: left; clear: none; width: 75%; margin-bottom: 3px; }
+	.userinfo p { 
+		margin-left: 3px; 
+		}
+.usericon { float: left; clear: none; width: 15%; margin: 0 0 3px 22px; }
+	.usericon img {
+		border: 1px solid #F4950E;
+		padding: 1px;
+		}
+
+<!-- Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/ --><!-- Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/ -->
