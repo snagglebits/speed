@@ -1,4 +1,4 @@
 wp-config.php
 wp-config/stories
 *.mp4
-
+*.DS_Store
