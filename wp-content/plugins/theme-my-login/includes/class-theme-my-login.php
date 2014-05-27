@@ -1178,4 +1178,3 @@ if(typeof wpOnload=='function')wpOnload()
 	}
 }
 endif; // Class exists
-
