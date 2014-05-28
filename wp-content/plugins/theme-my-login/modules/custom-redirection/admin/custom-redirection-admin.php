@@ -199,4 +199,3 @@ class Theme_My_Login_Custom_Redirection_Admin extends Theme_My_Login_Abstract {
 Theme_My_Login_Custom_Redirection_Admin::get_object();
 
 endif;
-
