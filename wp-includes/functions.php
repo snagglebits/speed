@@ -145,7 +145,7 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 	 * Filter the date formatted based on the locale.
 	 *
 	 * @since 2.8.0
-	 * 
+	 *
 	 * @param string $j          Formatted date string.
 	 * @param string $req_format Format to display the date.
 	 * @param int    $i          Unix timestamp.
@@ -4121,8 +4121,8 @@ function wp_allowed_protocols() {
 
 		/**
 		 * Filter the list of protocols allowed in HTML attributes.
-		 * 
-		 * @since 3.0.0 
+		 *
+		 * @since 3.0.0
 		 *
 		 * @param array $protocols Array of allowed protocols e.g. 'http', 'ftp', 'tel', and more.
 		 */

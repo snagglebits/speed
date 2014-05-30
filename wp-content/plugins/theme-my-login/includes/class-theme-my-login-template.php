@@ -293,7 +293,7 @@ class Theme_My_Login_Template extends Theme_My_Login_Abstract {
 			'register'     => true,
 			'lostpassword' => true
 		) );
-		
+
 		$action_links = array();
 		if ( $args['login'] && $this->get_option( 'show_log_link' ) ) {
 			$action_links[] = array(
@@ -580,4 +580,3 @@ class Theme_My_Login_Template extends Theme_My_Login_Abstract {
 	}
 }
 endif; // Class exists
-

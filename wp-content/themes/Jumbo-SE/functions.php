@@ -10,7 +10,7 @@
  * Create a login form Shortcode with accompanying Wp-login call - Original tutorial was at -
  *http://justintadlock.com/archives/2011/08/30/adding-a-login-form-to-a-page
  */
- add_action( 'init', 'my_add_shortcodes' );
+/** add_action( 'init', 'my_add_shortcodes' );
 
 function my_add_shortcodes() {
 
@@ -20,7 +20,7 @@ function my_add_shortcodes() {
  * If the user is already logged in, and if not, calls the wp-login-form.php file.
  *
  */
-function my_login_form_shortcode() {
+/**function my_login_form_shortcode() {
 
 	if ( is_user_logged_in() )
 		return '<p>You are already logged in!</p>';

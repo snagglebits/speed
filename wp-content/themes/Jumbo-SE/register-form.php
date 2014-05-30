@@ -9,7 +9,7 @@ Theme My Login will always look in your theme's directory first, before using th
 	<?php $template->the_errors(); ?>
 	<form name="registerform" id="registerform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'register' ); ?>" method="post">
 		<p>
-			<label for="user_login<?php $template->the_instance(); ?>"><?php _e( 'Username' ); ?></label>
+			<label for="user_login<?php $template->the_instance(); ?>"><?php _e( 'Pick a Username' ); ?></label>
 			<input type="text" name="user_login" id="user_login<?php $template->the_instance(); ?>" class="input" value="<?php $template->the_posted_value( 'user_login' ); ?>" size="20" />
 		</p>
 <p>
