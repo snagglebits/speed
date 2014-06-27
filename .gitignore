@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 wp-config.php
 wp-config/stories
 *.mp4
 *.DS_Store
+<<<<<<< HEAD
+=======
+=======
+*/.DS_Store
+>>>>>>> login
+>>>>>>> 092195c556a3e086b03de67e1631f56854c04331
