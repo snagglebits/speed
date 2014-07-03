@@ -115,7 +115,7 @@ class Theme_My_Login extends Theme_My_Login_Abstract {
 	public static function default_pages() {
 		return apply_filters( 'tml_default_pages', array(
 			'login'        => __( 'Log In'         ),
-			'logout'       => __( 'func'        ),
+			'logout'       => __( 'Log Out'        ),
 			'register'     => __( 'Register'       ),
 			'lostpassword' => __( 'Lost Password'  ),
 			'resetpass'    => __( 'Reset Password' )
@@ -1178,3 +1178,4 @@ if(typeof wpOnload=='function')wpOnload()
 	}
 }
 endif; // Class exists
+
