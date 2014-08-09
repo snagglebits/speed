@@ -3,7 +3,7 @@
  * Plugin Name: VaultPress
  * Plugin URI: http://vaultpress.com/?utm_source=plugin-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * Description: Protect your content, themes, plugins, and settings with <strong>realtime backup</strong> and <strong>automated security scanning</strong> from <a href="http://vaultpress.com/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">VaultPress</a>. Activate, enter your registration key, and never worry again. <a href="http://vaultpress.com/help/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">Need some help?</a>
- * Version: 1.6.2
+ * Version: 1.6.3
  * Author: Automattic
  * Author URI: http://vaultpress.com/?utm_source=author-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * License: GPL2+
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) )
 class VaultPress {
 	var $option_name    = 'vaultpress';
 	var $db_version     = 3;
-	var $plugin_version = '1.6.2';
+	var $plugin_version = '1.6.3';
 
 	function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -141,11 +141,7 @@ class VaultPress {
 				return false;
 		}
 
-		if ( 'key' == $key && !isset( $this->options[$key] ) ) {
-			return '';
-		}
-
-		if ( 'secret' == $key && !isset( $this->options[$key] ) ) {
+		if ( ( 'key' == $key || 'secret' == $key ) && empty( $this->options[$key] ) ) {
 			return '';
 		}
 
@@ -340,6 +336,14 @@ class VaultPress {
 	}
 
 	function ui() {
+		if ( $this->is_localhost() ) {
+			$this->update_option( 'connection', time() );
+			$this->update_option( 'connection_error_code', 'error_localhost' );
+			$this->update_option( 'connection_error_message', 'Hostnames such as localhost or 127.0.0.1 can not be reached by vaultpress.com and will not work with the service. Sites must be publicly accessible in order to work with VaultPress.' );
+			$this->error_notice();
+			return;
+		}
+
 		if ( !empty( $_GET['error'] ) ) {
 			$this->error_notice();
 			$this->clear_connection();
@@ -1662,6 +1666,16 @@ JS;
 		else
 			return null == $args ? '' : $args;
 		return $args;
+	}
+
+	function is_localhost() {
+		$site_url = $this->site_url();
+		if ( empty( $site_url ) )
+			return false;
+		$parts = parse_url( $site_url );
+		if ( !empty( $parts['host'] ) && in_array( $parts['host'], array( 'localhost', '127.0.0.1' ) ) )
+			return true;
+		return false;
 	}
 
 	function contact_service( $action, $args = array() ) {

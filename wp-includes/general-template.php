@@ -1976,7 +1976,7 @@ function the_weekday() {
 	 *
 	 * @since 0.71
 	 *
-	 * @param string $the_weekday
+	 * @param string $the_weekday 
 	 */
 	$the_weekday = apply_filters( 'the_weekday', $the_weekday );
 	echo $the_weekday;
@@ -2008,7 +2008,7 @@ function the_weekday_date($before='',$after='') {
 	 *
 	 * @since 0.71
 	 *
-	 * @param string $the_weekday_date
+	 * @param string $the_weekday_date 
 	 * @param string $before           The HTML to output before the date.
 	 * @param string $after            The HTML to output after the date.
 	 */
@@ -2409,10 +2409,10 @@ function language_attributes($doctype = 'html') {
  * It is possible to add query vars to the link by using the 'add_args' argument
  * and see {@link add_query_arg()} for more information.
  *
- * The 'before_page_number' and 'after_page_number' arguments allow users to
+ * The 'before_page_number' and 'after_page_number' arguments allow users to 
  * augment the links themselves. Typically this might be to add context to the
  * numbered links so that screen reader users understand what the links are for.
- * The text strings are added before and after the page number - within the
+ * The text strings are added before and after the page number - within the 
  * anchor tag.
  *
  * @since 2.1.0
