@@ -2,16 +2,16 @@
 class obox_content_widget extends WP_Widget {
 	/** constructor */
 	function obox_content_widget() {
-		parent::WP_Widget(false, $name = __("(Obox) Content Widget", "ocmx"), array("description" => "Display various kinds of content in a multi-column layout on your home page."));	
+		parent::WP_Widget(false, $name = __("(Obox) Content Widget", "ocmx"), array("description" => "Display various kinds of content in a multi-column layout on your home page."));
 	}
 
 	/** @see WP_Widget::widget */
-	function widget($args, $instance) {		
+	function widget($args, $instance) {
 		global $woocommerce;
 
 		// Turn $args array into variables.
 		extract( $args );
-		
+
 		// Turn $instance array into variables
 		$instance_defaults = array ( 'excerpt_length' => 80, 'post_thumb' => 1, 'posttype' => 'post', 'postfilter' => '0', 'post_count' => 4, 'layout_columns' => 2);
 		$instance_args = wp_parse_args( $instance, $instance_defaults );
@@ -25,7 +25,7 @@ class obox_content_widget extends WP_Widget {
 		if( isset( $title_link ) && $title_link != '' ) {
 			$catlink = $title_link;
 		}
-		
+
 		// Setup the post filter if it's defined
 		if( !isset( $filterval ) ) {
 			if(isset($postfilter) && isset($instance[$postfilter]))
@@ -33,13 +33,13 @@ class obox_content_widget extends WP_Widget {
 			else
 				$filterval = 0;
 		}
-	
+
 		// Set the base query args
 		$args = array(
 			"post_type" => $posttype,
 			"posts_per_page" => $post_count
 		);
-		
+
 		// Filter by the chosen taxonomy
 		if(isset($postfilter) && $postfilter != "" && $filterval != "0") :
 			$args['tax_query'] = array(
@@ -50,16 +50,16 @@ class obox_content_widget extends WP_Widget {
 					)
 				);
 		endif;
-		
+
 		// Set the post order
 		if(isset($post_order_by)) :
 			$args['order'] = $post_order;
 			$args['orderby'] = $post_order_by;
 		endif;
-		
+
 		// Main Post Query
 		$loop = new WP_Query($args); ?>
-		
+
 		<li class="content-widget <?php echo $posttype; ?>-content-widget widget clearfix">
 
 			<?php if(isset($title) && $title != "") : ?>
@@ -71,9 +71,9 @@ class obox_content_widget extends WP_Widget {
 					<?php endif; ?>
 				</h3>
 			<?php endif; ?>
-			
+
 			<ul class="<?php echo $layout_columns; ?>-column content-widget-item <?php echo $posttype; ?><?php if($posttype == "product") echo 'products' ?> clearfix">
-			
+
 				<?php while ( $loop->have_posts() ) : $loop->the_post();
 					if($posttype == "product") :
 						global $post;
@@ -88,38 +88,41 @@ class obox_content_widget extends WP_Widget {
 						$width = 150;
 						$height = 150;
 						$resizer = '1-1-medium';
-					elseif($layout_columns !="1"): 
+					elseif($layout_columns !="1"):
 						$width = 490;
 						$height = 368;
 						$resizer = '4-3-medium';
-					else : 
+					else :
 						$width = 980;
 						$height = 535;
 						$resizer = '1000auto';
 					endif;
-					
-					if($posttype == 'partners' || $posttype == 'team') : 
-						$imagelink = true; 
-					else : 
+
+					if($posttype == 'partners' || $posttype == 'team') :
+						$imagelink = true;
+					else :
 						$imagelink = false;
 					endif;
-					
-					$link = get_permalink($post->ID); 
+
+					$link = get_permalink($post->ID);
 					$image_args  = array('postid' => $post->ID, 'width' => $width, 'height' => $height, 'hide_href' => $imagelink, 'exclude_video' => $post_thumb, 'wrap' => 'div', 'wrap_class' => 'post-image fitvid', 'imglink' => false, 'resizer' => $resizer);
-					$image = get_obox_media($image_args); 
-					
+					$image = get_obox_media($image_args);
+
+					// If we've chosen to hide the post thumbnails, just set it to nothing
+					if( $post_thumb == "none" ) $image = "";
+
 					// For Services Post Type
 					if($posttype == 'services')
-						$icon = get_post_meta( $post->ID, 'icon', true ); 
-					
+						$icon = get_post_meta( $post->ID, 'icon', true );
+
 					// For Team Post Type
 					if($posttype == 'team') :
 						$position = get_post_meta($post->ID, "position", true);
 						$facebook = get_post_meta($post->ID, "facebook", true);
 						$twitter = get_post_meta($post->ID, "twitter", true);
-						$linkedin = get_post_meta($post->ID, "linkedin", true); 
+						$linkedin = get_post_meta($post->ID, "linkedin", true);
 					endif; ?>
-					
+
 					<li class="column">
 						<?php if( ( $post_thumb == 1 || $post_thumb == 0 && $post_thumb != 'none' ) && $layout_columns !='one') :
 							if(isset($icon) && $icon !='') : ?>
@@ -128,34 +131,34 @@ class obox_content_widget extends WP_Widget {
 										<img src="<?php echo $icon; ?>" alt="<?php esc_attr(get_the_title()); ?>" />
 									</a>
 								</div>
-							<?php elseif($image != ""): 
+							<?php elseif($image != ""):
 								echo $image;
-							endif; 
+							endif;
 						endif; ?>
-						   
+
 						<?php if($posttype != 'partners') : ?>
 							<div class="content">
-				 
+
 								<?php if(($posttype != 'team' || $posttype != 'features') && isset($show_date) && $show_date == "on") : ?>
 									<h5 class="post-date">
 										<?php the_time(get_option('date_format')); ?>
 									</h5>
 								<?php endif; ?>
-							
+
 								<h4 class="post-title"><a href="<?php echo $link; ?>"><?php the_title(); ?></a></h4>
-								
+
 								<?php if($post_thumb != "none" && $layout_columns == 'one') :
 									//Show the Featured Image or Video
 									if($image != "") {echo $image;}
 								endif;
-								
+
 								if($posttype == 'team') : ?>
 									<!--Show the Position, if it exists -->
 									<?php if(isset($position) && $position !='') : ?>
 										<h5 class="position"><?php echo $position; ?></h5>
 									<?php endif; ?>
-									<!--Show Social Links --> 
-									<?php if(isset($show_excerpts) && $show_excerpts == "on") : ?>                  
+									<!--Show Social Links -->
+									<?php if(isset($show_excerpts) && $show_excerpts == "on") : ?>
 										<ul class="team-social clearfix">
 											<?php if(isset($facebook) && $facebook !='') : ?>
 												<li>
@@ -173,7 +176,7 @@ class obox_content_widget extends WP_Widget {
 												</li>
 											<?php endif; ?>
 										</ul>
-									<?php endif; 
+									<?php endif;
 								else :
 								// Excerpts on/off
 								if(isset( $show_excerpts ) && $show_excerpts == "on" ) :
@@ -185,41 +188,41 @@ class obox_content_widget extends WP_Widget {
 										$content = get_the_content();
 										$excerpttext = strip_tags($content);
 									endif;
-										
+
 									// If the Excerpt exists, continue
 									if( $excerpttext != "" ) :
 										// Check how long the excerpt is
 										$counter = strlen( $excerpttext );
-										
+
 										// If we've set a limit on the excerpt, put it into play
 										if( !isset( $excerpt_length ) || ( isset ($excerpt_length ) && $excerpt_length == '' ) ) :
 											$excerpttext = $excerpttext;
 										else :
 											$excerpttext = substr( $excerpttext, 0, $excerpt_length );
 										endif; ?>
-									
-									<div class="copy">  
+
+									<div class="copy">
 										<?php // Use an ellipsis if the excerpt is longer than the count
 										if ( $excerpt_length < $counter ):
 											$excerpttext .= '&hellip;';
 											echo '<p>'.$excerpttext.'</p>';
-										else: 
+										else:
 											echo '<p>'.$excerpttext.'</p>';
 										endif;	?>
 									</div>
 								<?php endif;
-								endif; 
+								endif;
 								 if(isset($read_more) && $read_more == "on") :
 									echo '<a href="'.$link.'" class="read-more">'.__('Read More', 'ocmx').'</a>';
 								endif; ?>
 							<?php endif; ?>
 							</div>
 						<?php endif; ?>
-					</li>		
+					</li>
 				<?php endwhile; ?>
 			</ul>
 		</li>
-	
+
 <?php
 	}
 
@@ -230,24 +233,24 @@ class obox_content_widget extends WP_Widget {
 
 	/** @see WP_Widget::form */
 	function form($instance) {
-		
+
 		// Turn $instance array into variables
 		$instance_defaults = array ( 'excerpt_length' => 80, 'post_thumb' => 1, 'posttype' => 'post', 'postfilter' => '0', 'post_count' => 4, 'layout_columns' => 2);
 		$instance_args = wp_parse_args( $instance, $instance_defaults );
 		extract( $instance_args, EXTR_SKIP );
-		
+
 		// Setup the post filter if it's defined
 		if(isset($postfilter) && isset($instance[$postfilter]))
 			$filterval = esc_attr($instance[$postfilter]);
 		else
-			$filterval = 0;	   
+			$filterval = 0;
 
 		$post_type_args = array("public" => true, "exclude_from_search" => false, "show_ui" => true);
 		$post_types = get_post_types( $post_type_args, "objects");
 ?>
 
 	<p><em><?php _e("Click Save after selecting a filter from each menu to load the next filter", "ocmx"); ?></em></p>
-	
+
 	<p>
 		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e("Title", "ocmx"); ?><input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php if(isset($title)) echo $title; ?>" /></label>
 	</p>
@@ -255,12 +258,12 @@ class obox_content_widget extends WP_Widget {
 	<p>
 		<label for="<?php echo $this->get_field_id('title_link'); ?>"><?php _e('Custom Title Link', 'ocmx'); ?><input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title_link'); ?>" type="text" value="<?php if(isset($title_link)) echo $title_link; ?>" /></label>
 	</p>
-	
+
 	<p>
 		<label for="<?php echo $this->get_field_id('posttype'); ?>"><?php _e("Display", "ocmx"); ?></label>
 		<select size="1" class="widefat" id="<?php echo $this->get_field_id("posttype"); ?>" name="<?php echo $this->get_field_name("posttype"); ?>">
 			<option <?php if($posttype == ""){echo "selected=\"selected\"";} ?> value="">--- Select a Content Type ---</option>
-				<?php foreach($post_types as $post_type => $details) : 
+				<?php foreach($post_types as $post_type => $details) :
 						if($post_type != 'attachment') : ?>
 							<option <?php if($posttype == $post_type){echo "selected=\"selected\"";} ?> value="<?php echo $post_type; ?>"><?php echo $details->labels->name; ?></option>
 						<?php endif;
@@ -269,8 +272,8 @@ class obox_content_widget extends WP_Widget {
 	</p>
 
 	<?php if($posttype != "") :
-		if($posttype != "page" && $post_type != 'attachment') : 
-			$taxonomyargs = array('post_type' => $posttype, "public" => true, "exclude_from_search" => false, "show_ui" => true); 
+		if($posttype != "page" && $post_type != 'attachment') :
+			$taxonomyargs = array('post_type' => $posttype, "public" => true, "exclude_from_search" => false, "show_ui" => true);
 			$taxonomies = get_object_taxonomies($taxonomyargs,'objects');
 			if(is_array($taxonomies) && !empty($taxonomies)) : ?>
 				<p>
@@ -284,7 +287,7 @@ class obox_content_widget extends WP_Widget {
 					</select>
 				</p>
 			<?php endif; // !empty($taxonomies)
-			
+
 			if(isset($validtaxes) && $postfilter != "" && ( (is_array($validtaxes) && in_array($postfilter, $validtaxes)) || !is_array($validtaxes) ) ) :
 				$tax = get_taxonomy($postfilter);
 				$terms = get_terms($postfilter, "orderby=count&hide_empty=0"); ?>
@@ -298,8 +301,8 @@ class obox_content_widget extends WP_Widget {
 				</p>
 			<?php endif; // isset($postfilter) && $postfilter != ""
 		 endif;  // $posttype != "page"
-	endif;  // $posttype != "" 
-	
+	endif;  // $posttype != ""
+
 	// Setup the column layouts
 	$layout_options = array('one' => '1', 'two' => '2', 'three' => '3', 'four' => '4', 'five' => '5', 'six' => '6');?>
 	<p>
@@ -310,7 +313,7 @@ class obox_content_widget extends WP_Widget {
 			<?php endforeach; ?>
 		</select>
 	</p>
-	
+
 	<p>
 		<label for="<?php echo $this->get_field_id('post_count'); ?>"><?php _e("Post Count", "ocmx"); ?></label>
 		<select size="1" class="widefat" id="<?php echo $this->get_field_id('post_count'); ?>" name="<?php echo $this->get_field_name('post_count'); ?>">
@@ -319,14 +322,14 @@ class obox_content_widget extends WP_Widget {
 				<option <?php if($post_count == $i) : ?>selected="selected"<?php endif; ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
 			<?php if($i < 1) :
 					$i++;
-				else: 
+				else:
 					$i=($i+1);
 				endif;
 			endwhile; ?>
 		</select>
 	</p>
 	<?php  // Setup the order values
-	$order_params = array("date" => "Post Date", "title" => "Post Title", "rand" => "Random",  "comment_count" => "Comment Count",  "menu_order" => "Menu Order"); ?> 
+	$order_params = array("date" => "Post Date", "title" => "Post Title", "rand" => "Random",  "comment_count" => "Comment Count",  "menu_order" => "Menu Order"); ?>
 	<p>
 		<label for="<?php echo $this->get_field_id('post_order_by'); ?>"><?php _e("Order By", "ocmx"); ?></label>
 		<select size="1" class="widefat" id="<?php echo $this->get_field_id('post_order_by'); ?>" name="<?php echo $this->get_field_name('post_order_by'); ?>">
@@ -342,7 +345,7 @@ class obox_content_widget extends WP_Widget {
 			<option <?php if(isset($post_order) && $post_order == "ASC") : ?>selected="selected"<?php endif; ?> value="ASC"><?php _e("Ascending", 'ocmx'); ?></option>
 		</select>
 	</p>
-	
+
 	<?php if($posttype != 'partners') : ?>
 		 <p>
 			<label for="<?php echo $this->get_field_id('post_thumb'); ?>"><?php _e("Show Images or Videos?", "ocmx"); ?></label>
@@ -381,7 +384,7 @@ class obox_content_widget extends WP_Widget {
 
 	<?php endif;
 	endif; ?>
-<?php 
+<?php
 	} // form
 
 }// class

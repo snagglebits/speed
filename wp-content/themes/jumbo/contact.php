@@ -18,13 +18,13 @@ if($contact_header !="title") : ?>
 			<div id="map" rel="<?php echo $location; ?>" <?php if($latlong != "") : ?>data-latlong="<?php echo $latlong; ?>"<?php endif; ?>></div>
 			<?php
 				$location_label = str_replace(" ", "%20", $location_label);
-				$string = file_get_contents("http://maps.googleapis.com/maps/api/geocode/xml?address=$location_label&sensor=true");
+				$string = file_get_contents("//maps.googleapis.com/maps/api/geocode/xml?address=$location_label&sensor=true");
 				$xml = @simplexml_load_string($string) or print ("no file loaded");
 				$addstring = "";
 				$added = array();
 				
 				//Places nearby:
-				$url = "http://maps.googleapis.com/maps/api/place/search/xml?type=establishment&location=".$xml[0]->result->geometry->location->lat.",".$xml[0]->result->geometry->location->lng."&radius=7500&sensor=true&key=AIzaSyD3jfeMZK1SWfRFDgMfxn_zrGRSjE7S8Vg";
+				$url = "//maps.googleapis.com/maps/api/place/search/xml?type=establishment&location=".$xml[0]->result->geometry->location->lat.",".$xml[0]->result->geometry->location->lng."&radius=7500&sensor=true&key=AIzaSyD3jfeMZK1SWfRFDgMfxn_zrGRSjE7S8Vg";
 				$string = file_get_contents($url);
 				$xml = @simplexml_load_string($string) or print ("no file loaded"); 
 			?>

@@ -16,7 +16,7 @@ class OCMX_Container
                     	<div class="ocmx-title-block">
                             <h2>OCMX Options</h2>
                             <h5>
-                                <span> &nbsp;| <a href="http://kb.oboxsites.com/theme-documentation/" target="_blank">View Theme Documentation</a></span>
+                                <span> &nbsp;| <a href="http://kb.oboxsites.com/documentation/" target="_blank">View Theme Documentation</a></span>
                                 <span>OCMX Version <?php echo $ocmx_version; ?></span>
                             </h5>
                         </div>

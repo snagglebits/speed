@@ -29,7 +29,7 @@ $link = get_permalink($post->ID); ?>
 							<a class="addthis_button_pinterest_pinit"></a>
 							<a class="addthis_counter addthis_pill_style"></a>
 						</div>
-						<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-507462e4620a0fff"></script>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-507462e4620a0fff"></script>
 						<!-- AddThis Button END -->
 					</li>
 				</ul>

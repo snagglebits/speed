@@ -118,13 +118,7 @@ function ocmx_customize_register($wp_customize) {
 				foreach ( $section[ 'elements' ] as $element ) { ?>
 					wp.customize('<?php echo $element[ 'slug' ]; ?>',function( value ) {
 						value.bind(function(to) {
-							<?php if( is_array( $element['jquery'] ) ){ 
-								foreach( $element['jquery'] as $jquery_css ) { ?>
-								jQuery('<?php echo $element['selectors']; ?>').css({'<?php echo $jquery_css; ?>': to});
-							<?php }
-							} else { ?>								
-								jQuery('<?php echo $element['selectors']; ?>').css({'<?php echo $element['jquery']; ?>': to});
-							<?php } ?>
+							jQuery('<?php echo $element['selectors']; ?>').css({'<?php echo $element['jquery']; ?>': to});
 						});
 					});
 				<?php 	 } // foreach $section[ 'elements' ]
@@ -199,7 +193,7 @@ function ocmx_customizer_reset_script() { ?>
 
 <?php }
 
-add_action( 'customize_controls_print_footer_scripts', 'ocmx_customizer_reset_script' ); 
+add_action( 'customize_controls_print_footer_scripts', 'ocmx_customizer_reset_script' );
 
 
 /*********************************/

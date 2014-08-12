@@ -26,7 +26,6 @@ get_header(); ?>
 			endwhile; ?> 
         </ul>
 		<?php motionpic_pagination("clearfix", "pagination clearfix"); ?>
-		<?php $wp_query = null; $wp_query = $temp;?>
 	</div>
 	
 	<?php if(get_option("ocmx_sidebar_layout") != "sidebarnone"): ?>

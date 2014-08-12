@@ -37,29 +37,29 @@ body{padding: 0 10px; font-size: 14px;}
 
 	/*---------------------------*/
 	/*- SLIDER POSITIONS --------*/
-	
+
 		/*-----------------------*/
 		/*- IMAGE LEFT ----------*/
 		.slider .image-left .slider-image{padding: 0; margin: 0px;}
 		.slider .image-left .slider-copy{padding: 0; margin: 0px;}
-		
+
 		/*-----------------------*/
 		/*- IMAGE RIGHT ---------*/
 		.slider .image-right .slider-image{padding: 0; margin: 0px;}
 		.slider .image-right .slider-copy{padding: 0; margin: 0px;}
-		
+
 		/*-----------------------*/
 		/*- WITH VIDEO ----------*/
 		.slider .image-right .has-video, .slider .image-left .has-video{padding: 2%; margin: 0px;}
-		
+
 		/*-----------------------*/
 		/*- TEXT ONLY -----------*/
 		.slider .text-only .slider-copy{width: 80%; float: none; padding: 0; margin-left: auto; margin-right: auto;}
-		
+
 		/*-------------------*/
 		/*- VIDEO ONLY ------*/
 		.slider .image-only .has-video{padding: 0; height: 320px; width: 80%;}
-		
+
 		/*-----------------------*/
 		/*- CENTERED CONTENT ----*/
 		.slider .image-title .slider-copy{text-align: center; margin: 0 auto 30px; padding: 0; margin-top: -25px; width: 80%;}
@@ -113,7 +113,7 @@ body{padding: 0 10px; font-size: 14px;}
 }
 
 @media only screen and (max-width: 768px){
-	
+
 .product-images{float: none; width: auto;}
 .purchase-options-container{float: none; width: auto;}
 
@@ -162,7 +162,7 @@ body{padding: 0 10px; font-size: 14px;}
 	.compact ul#nav ul.sub-menu, .compact ul#nav .children{display: block !important; visibility: visible !important; width: auto; margin: 0 5px 5px; position: static; background: #f0f0f0; border: 3px solid #e0e0e0;}
 	.compact ul#nav ul.sub-menu li, .compact ul#nav .children li{border-bottom: 1px solid #e0e0e0;}
 	.compact ul#nav ul.sub-menu li:last-child, .compact ul#nav .children li:last-child{border-bottom: none;}
-	
+
 	/*---------------------------*/
 	/*- EXPANDED NAVIGATION -----*/
 	.expanded #menu-drop-button{display: block;}
@@ -189,7 +189,7 @@ body{padding: 0 10px; font-size: 14px;}
 /*-------------------------------*/
 /*- BREAD CRUMBS ----------------*/
 #crumbs li{margin-right: 5px;}
-	
+
 /*-------------------------------*/
 /*- SLIDER ----------------------*/
 .slider .slider-content{padding: 2% 0%; margin-top: 20px;}
@@ -241,7 +241,7 @@ body{padding: 0 10px; font-size: 14px;}
 	#home_page_three_column .widget{float: none; width: auto; margin: 0 0 20px 0;}
 	#home_page_three_column .content{min-height: 0 !important;}
 	#home_page_three_column li:last-child{border-bottom: none; margin-bottom: 0;}
-	
+
 
 /*-------------------------------*/
 /*- COPY ------------------------*/
@@ -276,7 +276,7 @@ body{padding: 0 10px; font-size: 14px;}
 	.three-column .products .product{width: 48%; margin-right: 0 !important; margin-bottom: 20px;}
 	.three-column .products .product:nth-child(3n+4){clear: none;}
 	.three-column .products .product:nth-child(2n+1){margin-right: 4% !important;}
-	
+
 	.related .products .product:nth-child(3n), .upsells .products .product:nth-child(3n){display: none;}
 
 .shop-block{margin-bottom: 20px;}
@@ -316,19 +316,19 @@ body{padding: 0 10px; font-size: 14px;}
 	table{margin-bottom: 20px;}
 	table th, table td{padding: 5px; vertical-align: middle;}
 	table .product-thumbnail{display: none;}
-	table .product-quantity{display: none;}	
+	table .product-quantity{display: none;}
 
 	/*---------------------------*/
-	/*- COUPON + CHECKOUT BTNS --*/	
-	td .coupon{float: none; margin-bottom: 5px;}
-	td .coupon input{width: 50%; margin: 0;}
+	/*- COUPON + CHECKOUT BTNS --*/
+	td .coupon{float: none; width: auto; margin-bottom: 5px;}
+	td .coupon input.input-text{width: 50%; margin: 0;}
 	td .coupon .button{width: 50% !important;}
 	td.actions .button{display: block; width: 100%; float: none !important; margin: 0 0 5px !important;}
 
 	/*---------------------------*/
 	/*- COLUMNS -----------------*/
 	.col-1, .col-2{float: none; width: auto; margin-bottom: 20px;}
-	
+
 	#shiptobilling{float: none; width: auto;}
 
 #footer-container{display: none;}

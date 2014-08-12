@@ -21,11 +21,11 @@ add_action('admin_menu', 'ocmx_add_admin');
 function ocmx_add_admin() {
 	global $wpdb;
 
-	add_object_page("Theme Options", "Theme Options", 'manage_options', basename(__FILE__), '', 'http://obox-design.com/images/ocmx-favicon.png');
-	add_submenu_page(basename(__FILE__), "General Options", "General", "edit_theme_options", basename(__FILE__), 'ocmx_general_options');
-	add_submenu_page(basename(__FILE__), "Adverts", "Adverts", "administrator",  "ocmx-adverts", 'ocmx_advert_options');
-	add_submenu_page(basename(__FILE__), "Typography", "Typography", "edit_theme_options", "ocmx-fonts", 'ocmx_font_options');
+	add_object_page("Theme Options", "Theme Options", "edit_theme_options", basename(__FILE__), "", "//obox-design.com/images/ocmx-favicon.png");
+	add_submenu_page(basename(__FILE__), "General Options", "General", "edit_theme_options", basename(__FILE__), "ocmx_general_options");
+	add_submenu_page(basename(__FILE__), "Adverts", "Adverts", "administrator",  "ocmx-adverts", "ocmx_advert_options");
+	add_submenu_page(basename(__FILE__), "Typography", "Typography", "edit_theme_options", "ocmx-fonts", "ocmx_font_options");
 	add_submenu_page(basename(__FILE__), "Customize", "Customize", "edit_theme_options", "customize.php");
-	add_submenu_page(basename(__FILE__), "Help", "Help", "edit_theme_options", "obox-help", 'ocmx_welcome_page');
+	add_submenu_page(basename(__FILE__), "Help", "Help", "edit_theme_options", "obox-help", "ocmx_welcome_page");
 
 }

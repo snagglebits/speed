@@ -30,13 +30,13 @@ function ocmx_add_scripts()
 			if(
 				( is_home() && is_active_sidebar( 'slider' ) ) ||
 				( is_home() && get_option( 'ocmx_home_page_layout' ) == 'preset' &&  get_option("ocmx_slider_cat") != '1' ) ||
-				( is_page() && wp_basename( get_page_template() ) == 'widget-page.php' && is_active_sidebar( $post->post_name . "-slider" ) )
+				( wp_basename( get_page_template() ) == 'widget-page.php' )
 			) :
 				wp_enqueue_script( $obox_themeid."-slider", get_template_directory_uri()."/scripts/slider.js", array( "jquery" ) );
 
 			// Map scripts for contact page
 			elseif( is_page() && wp_basename( get_page_template() ) == 'contact.php' ) :
-				wp_enqueue_script( $obox_themeid."-map-api","http://maps.googleapis.com/maps/api/js?sensor=false");
+				wp_enqueue_script( $obox_themeid."-map-api","//maps.googleapis.com/maps/api/js?sensor=false");
 				wp_enqueue_script( $obox_themeid."-map-trigger", get_template_directory_uri()."/scripts/maps.js", array( "jquery" ) );
 
 				if( get_post_meta( $post->ID , 'zoom-level' , true ) != '' ) {

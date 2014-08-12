@@ -102,10 +102,12 @@
 					</li>
 				<?php endwhile; ?>
 			</ul>
-			<div class="slider-arrows <?php if( $slider_posts->post_count < 2 ){ echo 'no_display'; }?>">
-				<a href="#" class="previous"><?php _e("Previous", "ocmx"); ?></a>
-				<a href="#" class="next"><?php _e("Next", "ocmx"); ?></a>
-			</div>
+			<?php if( $slider_posts->post_count > 1 ){ ?>
+				<div class="slider-arrows">
+					<a href="#" class="previous"><?php _e("Previous", "ocmx"); ?></a>
+					<a href="#" class="next"><?php _e("Next", "ocmx"); ?></a>
+				</div>
+			<?php } // if found_posts ?>
 		</div>
 		<div id="slider-auto" class="no_display"><?php echo $auto_interval; ?></div>
 <?php

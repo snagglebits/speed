@@ -1,12 +1,12 @@
 /*
 Theme Name: Jumbo
 Design Studio: Obox Design http://oboxthemes.com/
-Version: 1.1.4
+Version: 1.1.8
 Author: Obox Design
 Author Description: Creators of beautiful and useable premium WordPress themes.
 Author URI: http://oboxthemes.com/
 Theme URI: http://oboxthemes.com/theme/jumbo/
-Description: A responsive eCommerce and business theme designed for furniture shop owners.
+Description: A responsive eCommerce and business theme designed for clothing retailers.
 Tags: one-column, two-columns, three-columns, fixed-width, custom-colors, featured-images, theme-options, translation-ready, business, corporate
 License: Wordpress derivate http://www.gnu.org/licenses/gpl-2.0.html
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -41,7 +41,7 @@ label{display: block; margin-bottom: 0px; color: #000; font-weight: 700; font-si
 textarea, input{padding: 8px; background: #fff; font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 24px;}
 textarea{width: 90%; padding: 8px; border: 3px solid #e0e0e0; -webkit-appearance: none; -webkit-appearance: none;}
 input[type=text], input[type=password]{width: 100%; max-width: 380px; padding: 8px; border: 3px solid #e0e0e0; -webkit-appearance: none;}
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{-webkit-appearance: none; margin: 0;}
+input[type=number], input[type=number]{-webkit-appearance: none; -moz-appearance: textfield; margin: 0;}
 
 a{color: #fc0; text-decoration: none; transition: all .15s ease-in-out;}
 a:hover{color: #000;}
@@ -113,7 +113,7 @@ ins {text-decoration: none;}
 /*-------------------------------------------------------------------------------------------*/
 #wrapper{background: #fff;}
 
-#header-contact-container{height: 35px; background: #fff; overflow: hidden; transition: all 0.3s ease 0s; position: relative;}
+#header-contact-container{height: 35px; background: #fff; overflow: visible; transition: all 0.3s ease 0s; position: relative;}
 #header-contacts{max-width: 1240px; margin: 0 auto; padding: 0 10px; position: relative;  font-weight: 400; font-size: 10px; text-transform: uppercase;}
 
 #header-container{width: 100%; background: #000; position: relative; position: fixed; z-index: 4; transition: all 0.3s ease 0s;}
@@ -195,7 +195,7 @@ ins {text-decoration: none;}
 		.six-column h4.post-title{margin-bottom: 10px;}
 		.six-column .post-image{overflow: hidden;}
 		.six-column .button{clear: both; float: left !important; margin: 0 !important; padding: 10px;}
-		.six-column .star-rating{float: left; margin-top: 10px;}
+		.six-column .star-rating{display: none;}
 		.six-column li p{font-size: 80%;}
 		.six-column .read-more{font-size: 80%;}
 		.six-column .post-date{font-size: 80%;}
@@ -209,7 +209,7 @@ ins {text-decoration: none;}
 		.five-column h4.post-title{margin-bottom: 10px;}
 		.five-column .post-image{}
 		.five-column .button{}
-		.five-column .star-rating{float: left; margin-top: 10px;}
+		.five-column .star-rating{float: none; margin: 10px auto;}
 		.five-column li p{font-size: 80%;}
 		.five-column .read-more{font-size: 80%;}
 		.five-column .post-date{font-size: 80%;}
@@ -221,7 +221,7 @@ ins {text-decoration: none;}
 		.four-column .column:nth-child(4n+4){margin-right: 0;}
 		.four-column .column:nth-child(4n+5){clear: left;}
 		.four-column .column:nth-child(3n+4){clear: none;}
-		.four-column .star-rating{float: left; margin-top: 10px;}
+		.four-column .star-rating{float: none; margin: 10px auto;}
 		.four-column .price{clear: both;}
 
 		/*---------------------*/
@@ -230,7 +230,7 @@ ins {text-decoration: none;}
 		.three-column .column{float: left; width: 32%; margin-right: 2%; margin-bottom: 30px;}
 		.three-column .column:nth-child(3n+3){margin-right: 0;}
 		.three-column .column:nth-child(3n+4){clear: left;}
-		.three-column .star-rating{float: left; margin-top: 10px;}
+		.three-column .star-rating{float: none; margin: 10px auto;}
 		.three-column .price{clear: both;}
 
 	    /*---------------------*/
@@ -240,7 +240,7 @@ ins {text-decoration: none;}
 		.two-column .column:nth-child(2n+2){margin-right: 0; margin-bottom: 30px;}
 		.two-column .column:nth-child(2n+3){clear: left;}
 		.two-column .column:nth-child(2n+3){clear: left;}
-		.two-column .star-rating{float: left; margin-top: 20px;}
+		.two-column .star-rating{float: none; margin: 10px auto;}
 		.two-column .price{clear: both;}
 
 	    /*---------------------*/
@@ -248,7 +248,7 @@ ins {text-decoration: none;}
 		.one-column .column{float: left; width: 100%; margin-bottom: 30px;}
 		.content-widget .one-column .post-title a{padding: 20px 0;}
 		.content-widget .one-column .post-image{margin-top: 30px;}
-		.content-widget .one-column .star-rating{float: left; margin-top: 20px;}
+		.content-widget .one-column .star-rating{float: none; margin: 20px auto;}
 		.content-widget .one-column .price{clear: both;}
 
 
@@ -808,7 +808,7 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 	/*- PORTFOLIO LIST -----------*/
 	.portfolio-list .column{text-align: left; margin-bottom: 40px; border: 3px solid #000;}
 	.portfolio-list .post-image{overflow: hidden; border-bottom: 3px solid #000;}
-	.portfolio-list .post-image img{transition: all .1s ease-in-out;}
+	.portfolio-list .post-image img{transition: all .1s ease-in-out; display: block;}
 	.portfolio-list .post-image:hover img{transform: scale(1.1); -webkit-transform: scale(1.1);}
 	.portfolio-list .post-title{font-size: 20px; line-height: 30px;}
 	.portfolio-list .content{padding: 20px;}
@@ -994,6 +994,7 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 /*- WIDGETIZED PAGE -------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 .widget-page{max-width: 1200px; margin: auto; padding: 0 20px 20px 20px;}
+#widgetized-widget-block{position: relative; z-index: 3; padding: 0 20px; margin-top: 0px; overflow: hidden;}
 
 
 /*-------------------------------------------------------------------------------------------*/
@@ -1030,9 +1031,6 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 /*- ECOMMERCE -------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 
-	.woocommerce-demo-store{padding-top: 37px;}
-	.demo_store{width: 100%; padding: 5px; background: #fc0; position: fixed; top: 0; left: 0; z-index: 10; color: #000; font-weight: 700; font-size: 14px; text-align: center;}
-
 	/*-----------------------------*/
 	/*- SHOP FULL WIDTH -----------*/
 	.shop-block{margin-bottom: 30px; color: #000; overflow: hidden;  font-weight: 700; font-size: 11px; letter-spacing: 2px; font-family: Raleway, Helvetica, Arial, sans-serif; text-transform: uppercase;}
@@ -1044,6 +1042,7 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 	/*-----------------------------*/
 	/*- ALERTS --------------------*/
 	.woocommerce_message, .woocommerce-message{padding: 10px; margin-bottom: 20px; border: 3px solid #000; overflow: hidden; color: #000; font-weight: 700; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;}
+	.demo_store{display: block; width: 100%; max-width: 1000px; margin-left: -500px;  padding: 5px; background: #ffc; border: 3px solid #FC6; border-radius: 4px; opacity: 0.95; position: fixed; left: 50%; bottom: 10px; z-index: 99; font-weight: bold; color: #c00; text-align: center;}
 
 	/*-----------------------------*/
 	/*- CATEGORY LIST PAGE --------*/
@@ -1261,10 +1260,10 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 
 		/*-------------------------*/
 		/*- COUPON FORM -----------*/
-		td .coupon{float: left; overflow: hidden;}
+		td .coupon{float: left; width: 45%; overflow: hidden;}
 		td .coupon label{display: none;}
-		td .coupon input.input-text{float: left; padding: 5px 10px; height: 35px; border: 3px solid #e0e0e0; border-right: none;}
-
+		td .coupon input.input-text{float: left; width: 70%; padding: 5px 10px; height: 35px; border: 3px solid #e0e0e0; border-right: none;}
+		td .coupon input.button{width: 30%;}
 
 	/*-----------------------------*/
 	/*- CART COLLATERALS ----------*/
@@ -1641,3 +1640,9 @@ li.comments-open:nth-child(2n){margin: 0 0 50px; padding: 0; border: none;}
 ul.gform_fields{margin: 0; padding: 0;}
 ul.gform_fields .gfield{overflow: hidden; margin-bottom: 25px;}
 .gform_fields label{color: #000;}
+
+/*--------------------------*/
+/*-WPML ----------------*/
+#lang_sel, #lang_sel_click{float: right; height: 100%; padding: 0 10px; width: auto; min-width: 100px;}
+#lang_sel a.lang_sel_sel, #lang_sel_click a.lang_sel_sel{color: #7e7e7e;}
+#lang_sel a, #lang_sel a:visited, #lang_sel_click a, #lang_sel_click a:visited{border: 0; padding: 4px;}

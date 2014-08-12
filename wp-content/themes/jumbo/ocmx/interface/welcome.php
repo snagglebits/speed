@@ -39,11 +39,11 @@ function ocmx_admin_tabs( $current = 'step1' ) {
 					<div class="column">
 						<div class="obox-help-buttons">
 							<a href="http://kb.oboxsites.com/wp-content/uploads/2013/11/department-demo-content.zip" class="demo-content"><span>Demo Content</span></a>
-							<a href="http://kb.oboxsites.com/documentation/<?php echo $obox_themeid; ?>-docs/" class="documentation" target="_blank"><span>Documentation</span></a>
-							<a href="http://oboxthemes.com/forum/post/" class="support-forums" target="_blank"><span>Get Support</span></a>
+							<a href="http://kb.oboxsites.com/themedoc-category/<?php echo $obox_themeid; ?>-docs/" class="documentation" target="_blank"><span>Documentation</span></a>
+							<a href="http://obox-design.com/forum_list.cfm" class="support-forums" target="_blank"><span>Suppot Forums</span></a>
 						</div>
 						<h2 class="settings-title">Welcome to <?php echo $obox_themename; ?> by Obox Themes</h2>
-						<p class="settings-intro">If you need step-by-step instructions for setting up and using the theme, check out our <a href="http://kb.oboxsites.com/documentation/<?php echo $obox_themeid; ?>-docs" target="_blank"><?php echo $obox_themename; ?> Theme documentation</a>. If know your way around WordPress, you can use our Quick Setup steps below.</p>
+						<p class="settings-intro">If you need step-by-step instructions for setting up and using the theme, check out our <a href="http://kb.oboxsites.com/themedoc-category/<?php echo $obox_themeid; ?>-docs" target="_blank"><?php echo $obox_themename; ?> Theme documentation</a>. If know your way around WordPress, you can use our Quick Setup steps below.</p>
 					</div>
 				</div>
 			</div>

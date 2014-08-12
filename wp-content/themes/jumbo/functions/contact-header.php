@@ -57,6 +57,8 @@ if($show_contact !="false" ) : ?>
 						'fallback_cb' => false)
 					); ?>
 			</div>
+
+			<?php do_action('icl_language_selector'); //WPML Support ?>
 		</div>
 	</div>
 <?php endif; ?>

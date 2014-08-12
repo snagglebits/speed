@@ -69,10 +69,10 @@
 			// If there are parent pages, output them
 			if( isset( $parent_pages ) && is_array($parent_pages) ) {
 				$parent_pages = array_reverse($parent_pages);
-				foreach ( $parent_pages as $post ) { ?>
+				foreach ( $parent_pages as $page_id ) { ?>
 					<!-- Parent page title -->
 					<li> / </li>
-					<li><a href="<?php echo get_permalink($page->ID); ?>"><?php echo get_the_title($page->ID); ?></a></li>
+					<li><a href="<?php echo get_permalink( $page_id ); ?>"><?php echo get_the_title( $page_id ); ?></a></li>
 				<?php }
 			}
 

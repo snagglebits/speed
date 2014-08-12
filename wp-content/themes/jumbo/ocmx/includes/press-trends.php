@@ -20,7 +20,7 @@ function presstrends_theme() {
 	global $wpdb;
 	$data = get_transient( 'presstrends_theme_cache_data' );
 	if ( !$data || $data == '' ) {
-		$api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
+		$api_base = '//api.presstrends.io/index.php/api/sites/add/auth/';
 		$url      = $api_base . $auth . '/api/' . $api_key . '/';
 
 		$count_posts    = wp_count_posts();
@@ -44,7 +44,7 @@ function presstrends_theme() {
 		}
 		$posts_with_comments = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='post' AND comment_count > 0" );
 		$data                = array(
-			'url'             => stripslashes( str_replace( array( 'http://', '/', ':' ), '', site_url() ) ),
+			'url'             => stripslashes( str_replace( array( '//', '/', ':' ), '', site_url() ) ),
 			'posts'           => $count_posts->publish,
 			'pages'           => $count_pages->publish,
 			'comments'        => $comments_count->total_comments,

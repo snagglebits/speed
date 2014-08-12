@@ -8,7 +8,7 @@
 		$data['video_type'] = 'youtube';
 		$data['video_id'] = $video_id;
 
-		$response = wp_remote_get("http://gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&q=$video_id", array( 'sslverify' => false ));
+		$response = wp_remote_get("//gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&q=$video_id", array( 'sslverify' => false ));
 
 		if( empty($response) || is_wp_error( $response ) ) {
 			return;
@@ -38,7 +38,7 @@
 		$data['video_type'] = 'vimeo';
 		$data['video_id'] = $video_id;
 
-		$response = wp_remote_get("http://vimeo.com/api/v2/video/$video_id.json", array( 'sslverify' => false ));
+		$response = wp_remote_get("//vimeo.com/api/v2/video/$video_id.json", array( 'sslverify' => false ));
 
 		if( empty($response) || is_wp_error( $response ) ) {
 			return;
