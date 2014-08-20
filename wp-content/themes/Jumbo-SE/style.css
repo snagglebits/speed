@@ -12,8 +12,10 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
-div.slider-copy h2{color:#FFF;} // Keeps the slider titles 
-div.logo h1 a img{height:98px;}
+div.slider-copy h2{color:#FFF;} // Keeps the slider titles white
+div.logo h1 a img{height:98px;} // Making proper height for the PALphd logo
+
+
 
 #home_page_downs > li.features-widget.widget.clearfix > ul > li > div > div.post-image.fitvid{border-bottom: none; float:left;}
 #home_page_downs > li.features-widget.widget.clearfix > ul > li {border: 3px 0 3px 0 solid #000;}
