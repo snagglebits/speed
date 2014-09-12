@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: antispam, capcha, captcha, captha, catcha, comment, comments, spam, security, login, lost password, math captcha, registration, cf7, contact, contact forms, form, contact form 7, bbpress
 Requires at least: 3.3
-Tested up to: 3.8.1
-Stable tag: 1.1.1
+Tested up to: 4.0
+Stable tag: 1.2.0
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -57,6 +57,12 @@ No questions yet.
 
 == Changelog ==
 
+= 1.2.0 =
+* Tweak: Added option to reset settings to defaults
+* Tweak: Code rewritten to singleton design pattern
+* Fix: Contact Form 7 compatibility issues
+* New: Option to donate this plugin :)
+
 = 1.1.1 =
 * Tweak: UI improvements for WordPress 3.8
 
@@ -104,5 +110,7 @@ No questions yet.
 
 == Upgrade Notice ==
 
-= 1.1.1 =
-* Tweak: UI improvements for WordPress 3.8
+= 1.2.0 =
+* Tweak: Added option to reset settings to defaults
+* Tweak: Code rewritten to singleton design pattern
+* Fix: Contact Form 7 compatibility issues

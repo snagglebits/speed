@@ -14,39 +14,36 @@ function wpcf7_add_shortcode_mathcaptcha()
 function wpcf7_mathcaptcha_shortcode_handler($tag)
 {
 	global $mc_class;
-	
-	if(!is_user_logged_in() || (is_user_logged_in() && $mc_class->get_options('hide_for_logged_users') === FALSE))
+
+	$tag = new WPCF7_Shortcode($tag);
+
+	if(empty($tag->name))
+		return '';
+
+	$validation_error = wpcf7_get_validation_error($tag->name);
+	$class = wpcf7_form_controls_class($tag->type);
+
+	if($validation_error)
 	{
-		$tag = new WPCF7_Shortcode($tag);
-
-		if(empty($tag->name))
-			return '';
-
-		$validation_error = wpcf7_get_validation_error($tag->name);
-		$class = wpcf7_form_controls_class($tag->type);
-
-		if($validation_error)
-			$class .= ' wpcf7-not-valid';
-
-		$atts = array();
-		$atts['size'] = 2;
-		$atts['maxlength'] = 2;
-		$atts['class'] = $tag->get_class_option($class);
-		$atts['id'] = $tag->get_option('id', 'id', true);
-		$atts['tabindex'] = $tag->get_option('tabindex', 'int', true);
-		$atts['aria-required'] = 'true';
-		$atts['type'] = 'text';
-		$atts['name'] = $tag->name;
-		$atts['value'] = '';
-		$atts = wpcf7_format_atts($atts);
-
-		$mc_form = $mc_class->generate_captcha_phrase('cf7');
-		$mc_form[$mc_form['input']] = '<input %2$s />';
-
-		$math_captcha_title = apply_filters('math_captcha_title', $mc_class->get_options('title'));
-
-		return sprintf(((empty($math_captcha_title)) ? '' : $math_captcha_title).'<span class="wpcf7-form-control-wrap %1$s">'.$mc_form[1].$mc_form[2].$mc_form[3].'%3$s</span><input type="hidden" value="'.($mc_class->get_session_number() - 1).'" name="'.$tag->name.'-sn" />', $tag->name, $atts, $validation_error);
+		$class .= ' wpcf7-not-valid';
 	}
+
+	$atts = array();
+	$atts['size'] = 2;
+	$atts['maxlength'] = 2;
+	$atts['class'] = $tag->get_class_option($class);
+	$atts['id'] = $tag->get_option('id', 'id', true);
+	$atts['tabindex'] = $tag->get_option('tabindex', 'int', true);
+	$atts['aria-required'] = 'true';
+	$atts['type'] = 'text';
+	$atts['name'] = $tag->name;
+	$atts['value'] = '';
+	$atts = wpcf7_format_atts($atts);
+
+	$mc_form = $mc_class->generate_captcha_phrase('cf7');
+	$mc_form[$mc_form['input']] = '<input %2$s />';
+
+	return sprintf('<label>'.apply_filters('math_captcha_title', $mc_class->get_attribute('title')).'</label><br /><span class="wpcf7-form-control-wrap %1$s">'.$mc_form[1].$mc_form[2].$mc_form[3].'%3$s</span>', $tag->name, $atts, $validation_error);
 }
 
 
@@ -64,11 +61,9 @@ function wpcf7_mathcaptcha_validation_filter($result, $tag)
 	{
 		if($_POST[$name] !== '')
 		{
-			$session_id = (isset($_POST[$name.'-sn']) && $_POST[$name.'-sn'] !== '' ? $mc_class->get_session_id($_POST[$name.'-sn']) : '');
-
-			if($session_id !== '' && get_transient('cf7_'.$session_id) !== FALSE)
+			if($mc_class->get_attribute('session_id') !== '' && get_transient('cf7_'.$mc_class->get_attribute('session_id')) !== FALSE)
 			{
-				if(strcmp(get_transient('cf7_'.$session_id), sha1(AUTH_KEY.$_POST[$name].$session_id, FALSE)) !== 0)
+				if(strcmp(get_transient('cf7_'.$mc_class->get_attribute('session_id')), sha1($mc_class->get_attribute('crypt_key').$_POST[$name].$mc_class->get_attribute('session_id'), FALSE)) !== 0)
 				{
 					$result['valid'] = FALSE;
 					$result['reason'][$name] = wpcf7_get_message('wrong_mathcaptcha');
@@ -103,15 +98,15 @@ function wpcf7_mathcaptcha_messages($messages)
 		array(
 			'wrong_mathcaptcha' => array(
 				'description' => __('Invalid captcha value.', 'math-captcha'),
-				'default' => $mc_class->get_error_messages('wrong')
+				'default' => $mc_class->err_msg['wrong']
 			),
 			'fill_mathcaptcha' => array(
 				'description' => __('Please enter captcha value.', 'math-captcha'),
-				'default' => $mc_class->get_error_messages('fill')
+				'default' => $mc_class->err_msg['fill']
 			),
 			'time_mathcaptcha' => array(
 				'description' => __('Captcha time expired.', 'math-captcha'),
-				'default' => $mc_class->get_error_messages('time')
+				'default' => $mc_class->err_msg['time']
 			)
 		)
 	);

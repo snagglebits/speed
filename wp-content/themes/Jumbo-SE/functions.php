@@ -30,3 +30,8 @@ function my_login_form_shortcode() {
 /*This is a Sidr widget from Alberto Valero: http://www.berriart.com/sidr/. Taken from another article available here to
  * Add mobile sidebar. From http://premium.wpmudev.org/blog/how-to-make-twenty-fourteen-or-any-other-wp-theme-super/
  */
+
+/**********************************
+/* Includes parent OCMX files */
+$folder = get_stylesheet_directory(). '/ocmx/';
+?>
