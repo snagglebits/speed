@@ -16,9 +16,16 @@ div.slider-copy h2{color:#FFF;} // Keeps the slider titles white
 div.logo h1 a img{height:98px;} // Making proper height for the PALphd logo
 
 
-
+/* This is all for the homepage features */
 #home_page_downs > li.features-widget.widget.clearfix > ul > li > div > div.post-image.fitvid{border-bottom: none; float:left;}
 #home_page_downs > li.features-widget.widget.clearfix > ul > li {border: 3px 0 3px 0 solid #000;}
 #home_page_downs > li.features-widget.widget.clearfix > ul > li > div > div.feature-content{width:75%;float:right;}
 #a_register_lin.ui-button.ui-button-big {color:#fff;}
-div.featured-content > div.post-image > a,  img{border:none;}
+/* This removes the orange underline from the "features" list of "what is se" on the homepage. This conflicts
+with the parent theme. Just erase this if you want the border under an image. */
+#widget-block .post-image{display: block; position: relative; overflow: hidden; border-bottom: none;}
+
+/* Creates a dropshadow effect under the logo bar. */
+div#header-container{-webkit-box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);
+-moz-box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);
+box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);}
