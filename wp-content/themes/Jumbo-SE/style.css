@@ -26,6 +26,6 @@ with the parent theme. Just erase this if you want the border under an image. */
 #widget-block .post-image{display: block; position: relative; overflow: hidden; border-bottom: none;}
 
 /* Creates a dropshadow effect under the logo bar. */
-div#header-container{-webkit-box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);
--moz-box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);
-box-shadow: 0px 3px 5px 0px rgba(99,97,99,1);}
+div#header-container{-webkit-box-shadow: 0px 3px 5px 0px rgba(99,97,99,0.19);
+-moz-box-shadow: 0px 3px 5px 0px rgba(99,97,99,0.19);
+box-shadow: 0px 3px 5px 0px rgba(99,97,99,0.19);}
