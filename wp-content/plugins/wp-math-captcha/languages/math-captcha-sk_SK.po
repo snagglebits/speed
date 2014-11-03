@@ -1,0 +1,371 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Math Captcha SK\n"
+"POT-Creation-Date: 2014-10-22 06:09+0100\n"
+"PO-Revision-Date: 2014-10-22 07:18+0100\n"
+"Last-Translator: Jan Fajcak <ja@fajo.name>\n"
+"Language-Team: Jan Fajcak <ja@fajo.name>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/class-core.php:39 ../includes/class-core.php:40
+#: ../includes/class-core.php:41
+msgid "ERROR"
+msgstr "CHYBA"
+
+#: ../includes/class-core.php:39 ../includes/integration-cf7.php:104
+#: ../includes/math-captcha-cf7.php:104
+msgid "Please enter captcha value."
+msgstr "Prosím, vložte správny výsledok."
+
+#: ../includes/class-core.php:40 ../includes/integration-cf7.php:100
+#: ../includes/math-captcha-cf7.php:100
+msgid "Invalid captcha value."
+msgstr "Nesprávny výsledok."
+
+#: ../includes/class-core.php:41 ../includes/integration-cf7.php:108
+#: ../includes/math-captcha-cf7.php:108
+msgid "Captcha time expired."
+msgstr "Čas na vloženie výsledku vypršal."
+
+#: ../includes/class-core.php:428
+msgid "one"
+msgstr "jeden"
+
+#: ../includes/class-core.php:429
+msgid "two"
+msgstr "dva"
+
+#: ../includes/class-core.php:430
+msgid "three"
+msgstr "tri"
+
+#: ../includes/class-core.php:431
+msgid "four"
+msgstr "štyri"
+
+#: ../includes/class-core.php:432
+msgid "five"
+msgstr "päť"
+
+#: ../includes/class-core.php:433
+msgid "six"
+msgstr "šesť"
+
+#: ../includes/class-core.php:434
+msgid "seven"
+msgstr "sedem"
+
+#: ../includes/class-core.php:435
+msgid "eight"
+msgstr "osem"
+
+#: ../includes/class-core.php:436
+msgid "nine"
+msgstr "deväť"
+
+#: ../includes/class-core.php:437
+msgid "ten"
+msgstr "desať"
+
+#: ../includes/class-core.php:438
+msgid "eleven"
+msgstr "jedenásť"
+
+#: ../includes/class-core.php:439
+msgid "twelve"
+msgstr "dvanásť"
+
+#: ../includes/class-core.php:440
+msgid "thirteen"
+msgstr "trinásť"
+
+#: ../includes/class-core.php:441
+msgid "fourteen"
+msgstr "štrnásť"
+
+#: ../includes/class-core.php:442
+msgid "fifteen"
+msgstr "pätnásť"
+
+#: ../includes/class-core.php:443
+msgid "sixteen"
+msgstr "šestnásť"
+
+#: ../includes/class-core.php:444
+msgid "seventeen"
+msgstr "sedemnásť"
+
+#: ../includes/class-core.php:445
+msgid "eighteen"
+msgstr "osemnásť"
+
+#: ../includes/class-core.php:446
+msgid "nineteen"
+msgstr "devätnásť"
+
+#: ../includes/class-core.php:447
+msgid "twenty"
+msgstr "dvadsať"
+
+#: ../includes/class-core.php:448
+msgid "thirty"
+msgstr "tridsať"
+
+#: ../includes/class-core.php:449
+msgid "forty"
+msgstr "štyridsať"
+
+#: ../includes/class-core.php:450
+msgid "fifty"
+msgstr "päťdesiat"
+
+#: ../includes/class-core.php:451
+msgid "sixty"
+msgstr "šesťdesiat"
+
+#: ../includes/class-core.php:452
+msgid "seventy"
+msgstr "sedemdesiat"
+
+#: ../includes/class-core.php:453
+msgid "eighty"
+msgstr "osemdesiat"
+
+#: ../includes/class-core.php:454
+msgid "ninety"
+msgstr "deväťdesiat"
+
+#: ../includes/class-settings.php:34
+msgid "login form"
+msgstr "prihlasovanie"
+
+#: ../includes/class-settings.php:35
+msgid "registration form"
+msgstr "registrácia"
+
+#: ../includes/class-settings.php:36
+msgid "reset password form"
+msgstr "obnovenie hesla"
+
+#: ../includes/class-settings.php:37
+msgid "comment form"
+msgstr "komentáre"
+
+#: ../includes/class-settings.php:38
+msgid "bbpress"
+msgstr "bbpress"
+
+#: ../includes/class-settings.php:39
+msgid "contact form 7"
+msgstr "contact form 7"
+
+#: ../includes/class-settings.php:43
+msgid "addition (+)"
+msgstr "sčítanie (+)"
+
+#: ../includes/class-settings.php:44
+msgid "subtraction (-)"
+msgstr "odčítanie (-)"
+
+#: ../includes/class-settings.php:45
+msgid "multiplication (&#215;)"
+msgstr "násobenie (&#215;)"
+
+#: ../includes/class-settings.php:46
+msgid "division (&#247;)"
+msgstr "delenie (&#247;)"
+
+#: ../includes/class-settings.php:50
+msgid "numbers"
+msgstr "čísla"
+
+#: ../includes/class-settings.php:51
+msgid "words"
+msgstr "slová"
+
+#: ../includes/class-settings.php:62 ../includes/class-settings.php:63
+#: ../includes/class-settings.php:78 ../includes/class-settings.php:81
+#: ../includes/integration-cf7.php:139 ../includes/math-captcha-cf7.php:139
+msgid "Math Captcha"
+msgstr "Math Captcha"
+
+#: ../includes/class-settings.php:83
+msgid "Need support?"
+msgstr "Potrebujete pomoc?"
+
+#: ../includes/class-settings.php:84
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr "Ak máte problém s týmto modulom, prosím povedzte o tom na"
+
+#: ../includes/class-settings.php:84
+msgid "Support forum"
+msgstr "Fóre podpory"
+
+#: ../includes/class-settings.php:86
+msgid "Do you like this plugin?"
+msgstr "Páči sa vám tento modul?"
+
+#: ../includes/class-settings.php:87
+msgid "Rate it 5"
+msgstr "Ohodnoďte ho"
+
+#: ../includes/class-settings.php:87
+msgid "on WordPress.org"
+msgstr "na WordPress.org "
+
+#: ../includes/class-settings.php:88
+msgid "Blog about it & link to the"
+msgstr "Blog o module a odkaz na"
+
+#: ../includes/class-settings.php:88
+msgid "plugin page"
+msgstr "stránka modulu"
+
+#: ../includes/class-settings.php:89
+msgid "Check out our other"
+msgstr "Pozrite sa na ďalšie naše"
+
+#: ../includes/class-settings.php:89
+msgid "WordPress plugins"
+msgstr "WordPress moduly"
+
+#: ../includes/class-settings.php:114
+msgid "Reset to defaults"
+msgstr "Obnoviť predvolené nastavenia"
+
+#: ../includes/class-settings.php:132
+msgid "Math Captcha settings"
+msgstr "Nastavenia Math Captcha"
+
+#: ../includes/class-settings.php:133
+msgid "Enable Math Captcha for"
+msgstr "Zapnúť Math Captcha pre"
+
+#: ../includes/class-settings.php:134
+msgid "Hide for logged in users"
+msgstr "Skryť pre prihlásených používateľov"
+
+#: ../includes/class-settings.php:135
+msgid "Mathematical operations"
+msgstr "Matematické operácie"
+
+#: ../includes/class-settings.php:136
+msgid "Display captcha as"
+msgstr "Zobraziť captchu ako"
+
+#: ../includes/class-settings.php:137
+msgid "Captcha field title"
+msgstr "Titulok poľa Captcha"
+
+#: ../includes/class-settings.php:138
+msgid "Captcha time"
+msgstr "Čas vypršania"
+
+#: ../includes/class-settings.php:139
+msgid "Block Direct Comments"
+msgstr "Blokovať priame komentáre"
+
+#: ../includes/class-settings.php:140
+msgid "Deactivation"
+msgstr "Deaktivácia"
+
+#: ../includes/class-settings.php:161
+msgid "Select where you'd like to use Math Captcha."
+msgstr "Vyberte, kde chcete captchu použiť."
+
+#: ../includes/class-settings.php:175
+msgid "Enable to hide captcha for logged in users."
+msgstr "Skryť captchu pre prihlásených používateľov."
+
+#: ../includes/class-settings.php:198
+msgid "Select which mathematical operations to use in your captcha."
+msgstr "Vyberte matematickú operáciu, ktorú chcete použiť."
+
+#: ../includes/class-settings.php:221
+msgid "Select how you'd like to display you captcha."
+msgstr "Vyberte, ako chcete zobraziť captchu."
+
+#: ../includes/class-settings.php:237
+msgid "How to entitle field with captcha?"
+msgstr "Vložte titulok pre pole s captchou."
+
+#: ../includes/class-settings.php:253
+msgid "Enter the time (in seconds) a user has to enter captcha value."
+msgstr "Vložte čas (v sekundách) na zadanie správnej hodnoty captche."
+
+#: ../includes/class-settings.php:267
+msgid ""
+"Blocks direct access to wp-comments-post.php. Enable this to prevent "
+"spambots from posting to Wordpress via a URL."
+msgstr ""
+"Blokovať priamy prístup do  wp-comments-post.php. Zapnite a zabráňte "
+"spambotom publikovať vo WordPress cez URL."
+
+#: ../includes/class-settings.php:281
+msgid "Delete settings on plugin deactivation."
+msgstr "Vymazať nastavenia pri deaktivovaní modulu."
+
+#: ../includes/class-settings.php:325
+msgid ""
+"You need to check at least one mathematical operation. Defaults settings of "
+"this option restored."
+msgstr "Je potrebné označiť aspoň jednu matematickú operáciu."
+
+#: ../includes/class-settings.php:344
+msgid ""
+"You need to check at least one group. Defaults settings of this option "
+"restored."
+msgstr "Je potrebné označiť aspoň jednu skupinu."
+
+#: ../includes/class-settings.php:381
+msgid "Settings restored to defaults."
+msgstr "Nastavenia obnovené na pôvodné hodnoty."
+
+#: ../includes/integration-cf7.php:151 ../includes/math-captcha-cf7.php:151
+msgid "Name"
+msgstr "Meno"
+
+#: ../includes/integration-cf7.php:157 ../includes/math-captcha-cf7.php:157
+msgid "Input field settings"
+msgstr "Nastavenia vstupného poľa"
+
+#: ../includes/integration-cf7.php:160 ../includes/integration-cf7.php:164
+#: ../includes/math-captcha-cf7.php:160 ../includes/math-captcha-cf7.php:164
+msgid "optional"
+msgstr "voliteľné"
+
+#: ../includes/integration-cf7.php:170 ../includes/math-captcha-cf7.php:170
+msgid "Copy this code and paste it into the form left."
+msgstr "Skopírujte tento kód a vložte ho do formulára vľavo."
+
+#: ../wp-math-captcha.php:167
+msgid "Are you sure you want to reset these settings to defaults?"
+msgstr "Naozaj chcete obnoviť pôvodné nastavenia modulu?"
+
+#: ../wp-math-captcha.php:202
+msgid "Support"
+msgstr "Podpora "
+
+#: ../wp-math-captcha.php:224
+msgid "Settings"
+msgstr "Nastavenia"
+
+#~ msgid "yes"
+#~ msgstr "ano"
+
+#~ msgid "no"
+#~ msgstr "ne"
+
+#~ msgid ""
+#~ "Select what kind of mathematical operations will be used to generate "
+#~ "captcha."
+#~ msgstr "Vyberte, jaký druh matematické operace má captcha generovat."
