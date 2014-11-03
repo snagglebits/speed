@@ -1,0 +1,355 @@
+/**
+* Event Espresso admin menu styles
+*/
+
+.ee_menu_group {
+	display: block;
+	background-color: #ddd;
+	margin: -2px -5px 0px -12px;
+	padding: 2px 0 3px 10px;
+	font-size:.95em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #333;
+	cursor: default;
+}
+.version-3-8.admin-color-fresh .ee_menu_group {
+	padding-left: 8px;
+	margin: 3px -12px -3px -12px;
+	border-left: 3px solid #2EA2CC;
+	background-color: #111111;
+	color: #fff;
+	font-weight: normal;
+}
+.version-3-8.admin-color-blue .ee_menu_group {
+	padding-left: 8px;
+	margin: 3px -12px -3px -12px;
+	border-left: 3px solid #74B6CE;
+	background-color: #096484;
+	color: #fff;
+	font-weight: normal;
+}
+.version-3-8.admin-color-light .ee_menu_group {
+	padding-left: 8px;
+	margin: 3px -12px -3px -12px;
+	border-left: 3px solid #D64E07;
+	background-color: #e5e5e5;
+	color: #D64E07;
+	font-weight: normal;
+}
+.version-3-8.admin-color-midnight .ee_menu_group {
+	padding-left: 8px;
+	margin: 3px -12px -3px -12px;
+	background-color: #363B3F;
+	border-left: 3px solid #D64E07;
+	color: #fff;
+	font-weight: normal;
+}
+
+div.TB-ee-frame a {
+	border-bottom: none;
+	padding: 0;
+	margin: 0;
+}
+
+.display-ee-error-trace-lnk {
+	cursor: pointer;
+}
+.smaller-text {
+	font-size: .8em;
+	line-height: 1em;
+}
+.small-text {
+	font-size: .85em;
+	line-height: 1.2em;
+}
+.big-text {
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+.bigger-text {
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+/**** ee about page *****/
+.ee-badge {
+	background-size: 200px 60px;
+	background-color: #000000;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 600;
+	margin: 5px 0 0;
+	height: 160px;
+	display: inline-block;
+	width: 125px;
+	color: #FFF;
+	text-rendering: optimizeLegibility;
+}
+
+.ee-badge .ee-icon-ee-cup-thick:before {
+	font-size: 80px;
+	margin-left: 20px;
+}
+
+.about-wrap .ee-badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.espresso-admin .about-text {
+	width: 80%;
+}
+
+
+/******************* DASHICONS ****************** */
+
+@font-face {
+	font-family: 'ee_dashicons';
+	src:url('../../templates/global_assets/fonts/ee_dashicons.eot');
+	src:url('../../templates/global_assets/fonts/ee_dashicons.eot?#iefix') format('embedded-opentype'),
+		url('../../templates/global_assets/fonts/ee_dashicons.ttf') format('truetype'),
+		url('../../templates/global_assets/fonts/ee_dashicons.woff') format('woff'),
+		url('../../templates/global_assets/fonts/ee_dashicons.svg#ee_dashicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dashicons, .ee-dashicons, .ee-icon:before, .checkin-icons:before, #wpadminbar .ee-icon:before, #toplevel_page_espresso_events div.wp-menu-image:before,#toplevel_page_espresso_maintenance_settings div.wp-menu-image:before {
+	position: relative;
+	top: -2px;
+	font-size: inherit;
+	height: auto;
+	margin-right: .5em;
+	vertical-align: middle;
+	width: auto;
+}
+
+.ee-icon:before, .ee-dashicons, .checkin-icons:before, #wpadminbar .ee-icon:before, #toplevel_page_espresso_events div.wp-menu-image:before,#toplevel_page_espresso_maintenance_settings div.wp-menu-image:before {
+	display: inline-block;
+	font-family: 'ee_dashicons' !important; /** using important b/c wp has dashicons setup with important for wp-menu-image and I had to override **/
+ 	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * used for those times when want to use the default dashicons font but not inherit any styles that may be assigned in in a particular location
+ */
+.ee-dashicons {
+	font-family: 'dashicons' !important;
+}
+
+#toplevel_page_espresso_events div.wp-menu-image:before,#toplevel_page_espresso_maintenance_settings div.wp-menu-image:before, #wpadminbar .ee-icon:before {
+	margin-left: 8px;
+	font-weight: 700 !important; /** using important b/c wp has dashicons setup with important  in wp-menu-image and I had to override **/
+	font-size: 18px;
+}
+
+.ee-icon-venue:before {
+	content: "\e600";
+}
+.ee-icon-user-edit:before {
+	content: "\e601";
+}
+.ee-icon-user-delete:before {
+	content: "\e602";
+}
+.ee-icon-user-add-new:before {
+	content: "\e603";
+}
+.ee-icon-tickets:before {
+	content: "\e604";
+}
+.ee-icon-tickets-download:before {
+	content: "\e605";
+}
+.ee-icon-PDF-file-type:before {
+	content: "\e606";
+}
+.ee-icon-payment-reminder:before {
+	content: "\e607";
+}
+.ee-icon-external-link:before {
+	content: "\e608";
+}
+.ee-icon-event:before {
+	content: "\e609";
+}
+.ee-icon-event-list-grid:before {
+	content: "\e60a";
+}
+.ee-icon-event-list-dates:before {
+	content: "\e60b";
+}
+.ee-icon-email:before {
+	content: "\e60c";
+}
+.ee-icon-email-send:before {
+	content: "\e60d";
+}
+.ee-icon-ee-cup:before {
+	content: "\e60e";
+}
+.ee-icon-ee-cup-thick:before, #toplevel_page_espresso_events div.wp-menu-image:before,#toplevel_page_espresso_maintenance_settings div.wp-menu-image:before {
+	content: "\e60f";
+}
+.ee-icon-clone:before {
+	content: "\e610";
+}
+.ee-icon-clock:before {
+	content: "\e611";
+}
+.ee-icon-arrow-move:before {
+	content: "\e612";
+}
+.ee-icon-check-out:before {
+	content: "\e613";
+}
+.ee-icon-check-in:before {
+	content: "\e614";
+}
+.ee-icon-cash:before {
+	content: "\e615";
+}
+.ee-icon-cash-remove:before {
+	content: "\e616";
+}
+.ee-icon-cash-edit:before {
+	content: "\e617";
+}
+.ee-icon-cash-add:before {
+	content: "\e618";
+}
+.ee-icon-calendar-edit:before {
+	content: "\e619";
+}
+
+
+.pink-icon:before, .pink { color: #E44064; }
+.green-icon:before, .green { color: #70CC50; }
+.drk-green-icon:before, .drk-green { color: #009900; }
+.red-icon:before, .red { color: #B4113F; }
+.orange-icon:before, .orange { color: #E76700; }
+.lt-blue-icon:before, .lt-blue { color: #00B1CA; }
+.blue-icon:before, .blue { color: #005B9E; }
+.yellow-icon:before, .yellow { color: #F8D755; }
+.lt-grey-icon:before, .lt-grey { color: #A39D9C; }
+.grey-icon:before, .grey { color: #888; }
+.drk-grey-icon:before, .drk-grey { color: #59595B; }
+.black-icon:before, .black { color: #2F3334; }
+
+
+.tags-links a {
+	white-space: nowrap;
+}
+.tags-links a:before {
+	content: "\f323";
+	display: inline-block;
+	font-family: dashicons;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	margin-right: .25em;
+}
+
+
+/** icon adjustments **/
+.ee-icon-color-grey:before {
+	color: #888;
+}
+
+.ee-icon-color-ee-grey:before {
+	color: #AC9D9C;
+}
+
+.ee-icon-color-ee-orange:before {
+	color: #E76700;
+}
+
+.ee-icon-color-ee-blue:before {
+	color: #00B1CA;
+}
+
+.ee-icon-color-ee-green:before {
+	color: #70CC50;
+}
+
+.ee-icon-color-ee-red:before {
+	color: #E44064;
+}
+
+.ee-icon-size-8:before { font-size: 8px !important; }
+.ee-icon-size-12:before { font-size: 12px !important; }
+.ee-icon-size-14:before { font-size: 14px !important; }
+.ee-icon-size-16:before {
+	font-size: 16px !important;
+	margin-right: -.002em;
+}
+.ee-icon-size-18:before {
+	font-size: 18px !important;
+	margin-right:-0.05em;
+}
+.ee-icon-size-20:before {
+	font-size: 20px !important;
+	margin-right: -0.1em;
+}
+.ee-icon-size-22:before {
+	font-size: 22px !important;
+	margin-right: -0.15em;
+}
+.ee-icon-size-24:before {
+	font-size: 24px !important;
+	margin-right: -0.2em;
+}
+
+.espresso-help-tab-lnk {
+	cursor: pointer;
+}
+
+.wp-list-table .ee-icon {
+	margin-right: .25em !important;
+}
+
+.ee-lock-icon:before, .ee-collapsible:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'dashicons';
+	vertical-align: top;
+	margin-top: 3px;
+}
+
+.ee-lock-icon:before {
+	content: "\f160";
+}
+
+
+.espresso-admin .wp-list-table .ee-lock-icon:before {
+	margin-left: 8px;
+}
+
+
+/**
+ * Fixes for some weird WP styling issues encountered on ee menu items
+ */
+#toplevel_page_espresso_events .wp-submenu li.toplevel_page_espresso_events {
+	min-height: inherit;
+}
+
+#toplevel_page_espresso_events .wp-submenu li.current a.toplevel_page_espresso_events {
+	background-color: transparent;
+	font-size: 13px;
+
+}
