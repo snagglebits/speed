@@ -53,7 +53,6 @@
 			- Category for current post
 			- Taxonomy for current post
 		*/
-
 		if( is_page() ) {
 
 			// Start with this page's parent ID
