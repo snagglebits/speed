@@ -35,10 +35,13 @@ function my_login_form_shortcode() {
 /* Includes parent OCMX files */
 $folder = get_stylesheet_directory(). '/ocmx/';
 
+/************ADDED VICTORIA PLUG FOR CONSULT HERE****/
+
+the_meta();
+
 
 /*************
 /*Add New User role - Event Coordinator
-
 add_role('event_coordinator', 'Event Coordinator', array(
     'read' => true, // True allows that capability
     'edit_posts' => true,
