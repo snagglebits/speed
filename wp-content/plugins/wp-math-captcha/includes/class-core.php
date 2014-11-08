@@ -204,15 +204,15 @@ class Math_Captcha_Core
 			if(Math_Captcha()->cookie_session->session_ids['default'] !== '' && get_transient('mc_'.Math_Captcha()->cookie_session->session_ids['default']) !== false)
 			{
 				if(strcmp(get_transient('mc_'.Math_Captcha()->cookie_session->session_ids['default']), sha1(AUTH_KEY.$_POST['mc-value'].Math_Captcha()->cookie_session->session_ids['default'], false)) !== 0)
-					$results['errors']->add('math-captcha-error', $this->error_messages['wrong']);
+					$result['errors']->add('math-captcha-error', $this->error_messages['wrong']);
 			}
 			else
-				$results['errors']->add('math-captcha-error', $this->error_messages['time']);
+				$result['errors']->add('math-captcha-error', $this->error_messages['time']);
 		}
 		else
-			$results['errors']->add('math-captcha-error', $this->error_messages['fill']);
+			$result['errors']->add('math-captcha-error', $this->error_messages['fill']);
 
-		return $results;
+		return $result;
 	}
 
 

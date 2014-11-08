@@ -2,7 +2,7 @@
 /*
 Plugin Name: Math Captcha
 Description: Math Captcha is a <strong>100% effective CAPTCHA for WordPress</strong> that integrates into login, registration, comments, Contact Form 7 and bbPress.
-Version: 1.2.0
+Version: 1.2.1
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/math-captcha/
@@ -67,7 +67,7 @@ class Math_Captcha
 			'deactivation_delete' => false,
 			'flush_rules' => false
 		),
-		'version' => '1.2.0'
+		'version' => '1.2.1'
 	);
 
 

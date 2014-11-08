@@ -4,7 +4,7 @@ Donate link: http://www.dfactory.eu/
 Tags: antispam, capcha, captcha, captha, catcha, comment, comments, spam, security, login, lost password, math captcha, registration, cf7, contact, contact forms, form, contact form 7, bbpress
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -39,7 +39,7 @@ For more information, check out the [plugin page](http://www.dfactory.eu/plugins
 * Polish - by Bartosz Arendt
 * Persian - by [Ali Mirzaei](http://alimir.ir/)
 * Russian - by Valery Ryaboshapko
-
+* Slovak - by [Ján Fajčák](http://fajo.name/)
 
 == Installation ==
 
@@ -49,13 +49,18 @@ For more information, check out the [plugin page](http://www.dfactory.eu/plugins
 
 == Frequently Asked Questions ==
 
-No questions yet.
+= Q. I have a question =
+
+A. Chances are, someone else has asked it. Check out the support forum at: http://www.dfactory.eu/support/
 
 == Screenshots ==
 
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.2.1 =
+* New: Slovak translation, thanks to [Ján Fajčák](http://fajo.name/)
 
 = 1.2.0 =
 * Tweak: Added option to reset settings to defaults
@@ -110,7 +115,5 @@ No questions yet.
 
 == Upgrade Notice ==
 
-= 1.2.0 =
-* Tweak: Added option to reset settings to defaults
-* Tweak: Code rewritten to singleton design pattern
-* Fix: Contact Form 7 compatibility issues
+= 1.2.1 =
+* New: Slovak translation, thanks to [Ján Fajčák](http://fajo.name/)

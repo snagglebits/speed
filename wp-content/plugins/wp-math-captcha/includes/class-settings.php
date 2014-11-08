@@ -173,6 +173,8 @@ class Math_Captcha_Settings
 		<div id="mc_general_hide_for_logged_users">
 			<fieldset>
 				<input id="mc-general-hide-for-logged" type="checkbox" name="math_captcha_options[hide_for_logged_users]" '.checked(true, Math_Captcha()->options['general']['hide_for_logged_users'], false).'/><label for="mc-general-hide-for-logged">'.__('Enable to hide captcha for logged in users.', 'math-captcha').'</label>
+				<br/>
+				<span class="description">'.__('Would you like to hide captcha for logged in users?', 'math-captcha').'</span>
 			</fieldset>
 		</div>';
 	}
@@ -265,6 +267,8 @@ class Math_Captcha_Settings
 		<div id="mc_general_block_direct_comments">
 			<fieldset>
 				<input id="mc-general-block-direct-comments" type="checkbox" name="math_captcha_options[block_direct_comments]" '.checked(true, Math_Captcha()->options['general']['block_direct_comments'], false).'/><label for="mc-general-block-direct-comments">'.__('Blocks direct access to wp-comments-post.php. Enable this to prevent spambots from posting to Wordpress via a URL.', 'math-captcha').'</label>
+				<br/>
+				<span class="description">'.__('Blocks direct access to wp-comments-post.php. Enable this to prevent spambots from posting to Wordpress via a URL.', 'math-captcha').'</span>
 			</fieldset>
 		</div>';
 	}
@@ -279,6 +283,8 @@ class Math_Captcha_Settings
 		<div id="mc_general_deactivation_delete">
 			<fieldset>
 				<input id="mc-general-deactivation-delete" type="checkbox" name="math_captcha_options[deactivation_delete]" '.checked(true, Math_Captcha()->options['general']['deactivation_delete'], false).'/><label for="mc-general-deactivation-delete">'.__('Delete settings on plugin deactivation.', 'math-captcha').'</label>
+				<br/>
+				<span class="description">'.__('Delete settings on plugin deactivation', 'math-captcha').'</span>
 			</fieldset>
 		</div>';
 	}
