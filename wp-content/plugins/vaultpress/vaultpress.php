@@ -3,7 +3,7 @@
  * Plugin Name: VaultPress
  * Plugin URI: http://vaultpress.com/?utm_source=plugin-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * Description: Protect your content, themes, plugins, and settings with <strong>realtime backup</strong> and <strong>automated security scanning</strong> from <a href="http://vaultpress.com/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">VaultPress</a>. Activate, enter your registration key, and never worry again. <a href="http://vaultpress.com/help/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">Need some help?</a>
- * Version: 1.6.5
+ * Version: 1.6.6
  * Author: Automattic
  * Author URI: http://vaultpress.com/?utm_source=author-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * License: GPL2+
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) )
 class VaultPress {
 	var $option_name    = 'vaultpress';
 	var $db_version     = 3;
-	var $plugin_version = '1.6.5';
+	var $plugin_version = '1.6.6';
 
 	function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -61,6 +61,29 @@ class VaultPress {
 		}
 
 		return $instance;
+	}
+	
+	static function register( $registration_key ) {
+		$vp = self::init();
+		
+		$nonce = wp_create_nonce( 'vp_register_' . $registration_key );
+		$args = array( 'registration_key' =>  $registration_key, 'nonce' => $nonce );
+		$response = $vp->contact_service( 'register', $args );
+
+		// Check for an error
+		if ( ! empty( $response['faultCode'] ) )
+			return new WP_Error( $response['faultCode'], $response['faultString'] );
+		
+		// Validate result
+		if ( empty( $response['key'] ) || empty( $response['secret'] ) || empty( $response['nonce'] ) || $nonce != $response['nonce'] )
+			return new WP_Error( 1, __( 'There was a problem trying to register your VaultPress subscription.' ) );
+		
+		// Store the result, force a connection test.
+		$vp->update_option( 'key', $response['key'] );
+		$vp->update_option( 'secret', $response['secret'] );
+		$vp->check_connection( true );
+
+		return true;
 	}
 
 	function activate( $network_wide ) {
@@ -948,7 +971,7 @@ class VaultPress {
 		$retry = 2;
 		do {
 			$retry--;
-			$protocol = 'http'; 
+			$protocol = 'https'; 
 			$args['sslverify'] = 'https' == $protocol ? true : false;
 			$r = wp_remote_get( $url=sprintf( "%s://%s/%s", $protocol, $hostname, $path ), $args );
 			if ( 200 == wp_remote_retrieve_response_code( $r ) ) {
@@ -1927,6 +1950,8 @@ JS;
 		global $vaultpress_pings;
 		if ( defined( 'WP_IMPORTING' ) && constant( 'WP_IMPORTING' ) )
 			return;
+		if ( isset( $_GET ) && isset( $_GET['comment_status'] ) && isset( $_GET['delete_all'] ) && 'spam' == $_GET['comment_status'] )
+			return;	// Skip pings from mass spam delete.
 		if ( !array_key_exists( $type, $vaultpress_pings ) )
 			return;
 
