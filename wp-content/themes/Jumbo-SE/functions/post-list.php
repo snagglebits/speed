@@ -16,7 +16,7 @@ $author = get_option("ocmx_meta_author_post");
 $social = get_option("ocmx_meta_social_post");
 
 // Feature Image
-$args  = array( 'postid' => $post->ID, 'width' => $width, 'height' => $height, 'hide_href' => false, 'exclude_video' => true, 'wrap' => 'div', 'wrap_class' => 'post-image fitvid', 'resizer' => $resizer);
+$args  = array( 'postid' => $post->ID, 'width' => $width, 'height' => $height, 'hide_href' => false, 'exclude_video' => true, 'wrap' => 'div', 'wrap_class' => 'post-image fitvid', /*'resizer' => $resizer*/);
 
 $image = get_obox_media( $args );
 
