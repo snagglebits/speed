@@ -3,7 +3,7 @@
  * Plugin Name: VaultPress
  * Plugin URI: http://vaultpress.com/?utm_source=plugin-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * Description: Protect your content, themes, plugins, and settings with <strong>realtime backup</strong> and <strong>automated security scanning</strong> from <a href="http://vaultpress.com/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">VaultPress</a>. Activate, enter your registration key, and never worry again. <a href="http://vaultpress.com/help/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">Need some help?</a>
- * Version: 1.6.7
+ * Version: 1.6.8
  * Author: Automattic
  * Author URI: http://vaultpress.com/?utm_source=author-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * License: GPL2+
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) )
 class VaultPress {
 	var $option_name    = 'vaultpress';
 	var $db_version     = 4;
-	var $plugin_version = '1.6.7';
+	var $plugin_version = '1.6.8';
 
 	function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -975,9 +975,9 @@ class VaultPress {
 		$data = false;
 		$https_error = null;
 		$retry = 2;
+		$protocol = 'https'; 
 		do {
 			$retry--;
-			$protocol = 'https'; 
 			$args['sslverify'] = 'https' == $protocol ? true : false;
 			$r = wp_remote_get( $url=sprintf( "%s://%s/%s?cidr_ranges=1", $protocol, $hostname, $path ), $args );
 			if ( 200 == wp_remote_retrieve_response_code( $r ) ) {
@@ -986,24 +986,28 @@ class VaultPress {
 				$data = @unserialize( wp_remote_retrieve_body( $r ) );
 				break;
 			}
-			if ( 'https' == $protocol )
+			if ( 'https' == $protocol ) {
 				$https_error = $r;
+				$protocol = 'http';
+			}
 			usleep( 100 );
 		} while( $retry > 0 );
 
-		$r_code = wp_remote_retrieve_response_code( $https_error );
-		if ( 0 == $retry && 200 != $r_code ) {
-			$error_message = sprintf( 'Unexpected HTTP response code %s', $r_code );
-			if ( false === $r_code )
-				$error_message = 'Unable to find an HTTP transport that supports SSL verification';
-			elseif ( is_wp_error( $https_error ) )
-				$error_message = $https_error->get_error_message();
-			
-			$this->update_option( 'connection', time() );
-			$this->update_option( 'connection_error_code', 99 );
-			$this->update_option( 'connection_error_message', sprintf( __('Warning: The VaultPress plugin is using an insecure protocol because it cannot verify the identity of the VaultPress server. Please contact your hosting provider, and ask them to check that SSL certificate verification is correctly configured on this server. The request failed with the following error: "%s". If you&rsquo;re still having issues please <a href="%1$s">contact the VaultPress&nbsp;Safekeepers</a>.', 'vaultpress' ), esc_html( $error_message ), 'http://vaultpress.com/contact/' ) );
+		if ( $https_error != null && ! empty( $data ) ) {
+			$r_code = wp_remote_retrieve_response_code( $https_error );
+			if ( 200 != $r_code ) {
+				$error_message = sprintf( 'Unexpected HTTP response code %s', $r_code );
+				if ( false === $r_code )
+					$error_message = 'Unable to find an HTTP transport that supports SSL verification';
+				elseif ( is_wp_error( $https_error ) )
+					$error_message = $https_error->get_error_message();
+				
+				$this->update_option( 'connection', time() );
+				$this->update_option( 'connection_error_code', 99 );
+				$this->update_option( 'connection_error_message', sprintf( __('Warning: The VaultPress plugin is using an insecure protocol because it cannot verify the identity of the VaultPress server. Please contact your hosting provider, and ask them to check that SSL certificate verification is correctly configured on this server. The request failed with the following error: "%s". If you&rsquo;re still having issues please <a href="%1$s">contact the VaultPress&nbsp;Safekeepers</a>.', 'vaultpress' ), esc_html( $error_message ), 'http://vaultpress.com/contact/' ) );
+			}
 		}
-
+	
 		return $data;
 	}
 
@@ -1861,11 +1865,13 @@ JS;
 		}
 		
 		foreach ( $remote_ips as $ip ) {
+			$ip = preg_replace( '#^::(ffff:)?#', '', $ip );
 			if ( $cidr = $this->ip_in_cidrs( $ip, $cidrs ) ) {
 				return true;
 			}
 		}
 		
+		$__vp_validate_error = array( 'error' => 'remote_addr_fail', 'detail' => $remote_ips );
 		return false;
 	}
 	
