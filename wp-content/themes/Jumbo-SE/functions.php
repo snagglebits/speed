@@ -74,7 +74,7 @@ add_role('event_coordinator', 'Event Coordinator', array(
     'manage_options' => true,
 ));
 */
-add_filter ('FHEE_management_capability', 'my_custom_menu_management_capability');
+
 
 function my_custom_menu_management_capability() {
     return 'edit_posts';
